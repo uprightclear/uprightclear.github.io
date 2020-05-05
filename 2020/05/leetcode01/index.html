@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Leetcode 刷题报告 #1" />
+<meta property="og:description" content="1.两数之和 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。
+你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
+示例:
+给定 nums = [2, 7, 11, 15], target = 9
+因为 nums[0] &#43; nums[1] = 2 &#43; 7 = 9 所以返回 [0, 1]
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/two-sum 著作权归领扣网络所有。
+题解(Java) class Solution {public int[] twoSum(int[] nums, int target) {Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();for (int i = 0; i &lt; nums." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://uprightclear.github.io/2020/05/leetcode01/" />
+<meta property="article:published_time" content="2020-05-05T17:09:06+08:00" />
+<meta property="article:modified_time" content="2020-05-05T17:09:06+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Leetcode 刷题报告 #1"/>
+<meta name="twitter:description" content="1.两数之和 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。
+你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
+示例:
+给定 nums = [2, 7, 11, 15], target = 9
+因为 nums[0] &#43; nums[1] = 2 &#43; 7 = 9 所以返回 [0, 1]
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/two-sum 著作权归领扣网络所有。
+题解(Java) class Solution {public int[] twoSum(int[] nums, int target) {Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();for (int i = 0; i &lt; nums."/>
+<meta name="generator" content="Hugo 0.64.1" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Leetcode 刷题报告 #1",
+  "url": "https:\/\/uprightclear.github.io\/2020\/05\/leetcode01\/",
+  "wordCount": "97",
+  "datePublished": "2020-05-05T17:09:06+08:00",
+  "dateModified": "2020-05-05T17:09:06+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "uprightclear"
+  }
+}
+</script>
+
+
+
+    <link rel="canonical" href="https://uprightclear.github.io/2020/05/leetcode01/">
+
+    <title>Leetcode 刷题报告 #1 | uprightclear</title>
+
+    
+    <!-- combined, minified CSS -->
+    
+    <link href="https://uprightclear.github.io/css/style.6da5c906cc7a8fbb93f31cd2316c5dbe3f19ac4aa6bfb066f1243045b8f6061e.css" rel="stylesheet" integrity="sha256-baXJBsx6j7uT8xzSMWxdvj8ZrEqmv7Bm8SQwRbj2Bh4=" crossorigin="anonymous">
+    
+
+    <!-- minified Font Awesome for SVG icons -->
+    
+    <script defer src="https://uprightclear.github.io/js/fontawesome.min.90e14c13cee52929ac33e1c21694a3cc95063a194eb22aad9f7976434e1a9125.js" integrity="sha256-kOFME87lKSmsM&#43;HCFpSjzJUGOhlOsiqtn3l2Q04akSU=" crossorigin="anonymous"></script>
+
+    <!-- RSS 2.0 feed -->
+    
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="https://uprightclear.github.io/">首页</a>
+          
+          <a class="nav-link" href="/%E5%85%B3%E4%BA%8E/" title="关于">关于</a>
+          
+          
+          <a class="nav-link" href="/%E8%81%94%E7%B3%BB/" title="联系">联系</a>
+          
+        </nav>
+      </div>
+    </div>
+    
+
+    
+    
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-title" dir="auto"><a href="https://uprightclear.github.io/" rel="home">uprightclear</a></h1>
+        <p class="lead blog-description" dir="auto">Share Life and Tech</p>
+      </div>
+    </header>
+    
+    
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="https://uprightclear.github.io/2020/05/leetcode01/">Leetcode 刷题报告 #1</a></h2>
+    <p class="blog-post-meta"><time datetime="2020-05-05T17:09:06&#43;08:00">2020年05月05日</time> by uprightclear</p>
+  </header>
+  <h2 id="1两数之和">1.两数之和</h2>
+<p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p>
+<p>示例:</p>
+<p>给定 nums = [2, 7, 11, 15], target = 9</p>
+<p>因为 nums[0] + nums[1] = 2 + 7 = 9
+所以返回 [0, 1]</p>
+<p>来源：力扣（LeetCode）
+链接：<a href="https://leetcode-cn.com/problems/two-sum">https://leetcode-cn.com/problems/two-sum</a>
+著作权归领扣网络所有。</p>
+<h2 id="题解java">题解(Java)</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> <span style="color:#a6e22e">twoSum</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> nums<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> target<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Map<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> map <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> complement <span style="color:#f92672">=</span> target <span style="color:#f92672">-</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>map<span style="color:#f92672">.</span><span style="color:#a6e22e">containsKey</span><span style="color:#f92672">(</span>complement<span style="color:#f92672">)</span> <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> map<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>complement<span style="color:#f92672">)</span> <span style="color:#f92672">!</span><span style="color:#f92672">=</span> i<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> <span style="color:#f92672">{</span> i<span style="color:#f92672">,</span> map<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>complement<span style="color:#f92672">)</span> <span style="color:#f92672">}</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">,</span> i<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;No two sum solution&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="思路">思路</h2>
+<p>运用HashMap哈希表来解决此题。</p>
+<p>创建complement临时变量，依次遍历数组中的元素，求出target与当前元素的差值并储存在临时变量complement中，通过查找哈希表中是否含有与complement相等的key来寻找目标的指针，若不存在，则将当前遍历元素及其对应指针存储在哈希表中，以备之后的遍历查找。若遍历结束仍未找到对应结果则throw报错。</p>
+<p>该代码返回值数组内元素无法实现升序，但不影响题目要求，可进行排序后再return。</p>
+<p><!-- raw HTML omitted -->PS：这是Leetcode刷题报告的开篇，从今天起尽量日更，也算是立个flag，不然真是懒得更新博客&hellip;&hellip;</p>
+
+
+  
+
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>关于</h4>
+    <p dir="auto">欢迎访问我的个人主页</p>
+  </section>
+  
+
+  
+        <section class="sidebar-module">
+    <h4>最近日志</h4>
+    <ol class="list-unstyled">
+
+
+<li><a href="/2020/05/leetcode01/">Leetcode 刷题报告 #1</a></li>
+
+<li><a href="/2020/02/my-first-blog/">My First Blog</a></li>
+
+    </ol>
+  </section>
+
+  
+
+  
+  <section class="sidebar-module">
+    <h4>链接</h4>
+    <ol class="list-unstyled">
+      
+      <li><a href="https://github.com/uprightclear">github</a></li>
+      
+      <li><a href="https://weibo.com/uprightclear">weibo</a></li>
+      
+    </ol>
+  </section>
+  
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+    
+
+    
+    <footer class="blog-footer">
+      <p dir="auto">
+      
+      除非特别声明，本站采用<a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 International license</a>.
+      
+      </p>
+      <p>
+      <a href="#">返回顶部</a>
+      </p>
+    </footer>
+    
+
+  </body>
+
+</html>
