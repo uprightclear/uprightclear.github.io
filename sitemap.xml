@@ -3,46 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://uprightclear.github.io/2020/05/leetcode01/</loc>
+    <loc>uprightclear.github.io/posts/</loc>
+    <lastmod>2020-05-05T18:06:46+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>uprightclear.github.io/</loc>
+    <lastmod>2020-05-05T18:06:46+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>uprightclear.github.io/2020/05/update/</loc>
+    <lastmod>2020-05-05T18:06:46+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>uprightclear.github.io/2020/05/leetcode01/</loc>
     <lastmod>2020-05-05T17:09:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://uprightclear.github.io/posts/</loc>
-    <lastmod>2020-05-05T17:09:06+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://uprightclear.github.io/</loc>
-    <lastmod>2020-05-05T17:09:06+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://uprightclear.github.io/page/</loc>
+    <loc>uprightclear.github.io/page/</loc>
     <lastmod>2020-02-24T12:35:25+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://uprightclear.github.io/%E8%81%94%E7%B3%BB/</loc>
+    <loc>uprightclear.github.io/%E8%81%94%E7%B3%BB/</loc>
     <lastmod>2020-02-24T12:35:25+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://uprightclear.github.io/%E5%85%B3%E4%BA%8E/</loc>
+    <loc>uprightclear.github.io/%E5%85%B3%E4%BA%8E/</loc>
     <lastmod>2020-02-24T12:34:51+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://uprightclear.github.io/2020/02/my-first-blog/</loc>
+    <loc>uprightclear.github.io/2020/02/my-first-blog/</loc>
     <lastmod>2020-02-24T11:30:04+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://uprightclear.github.io/categories/</loc>
+    <loc>uprightclear.github.io/categories/</loc>
   </url>
   
   <url>
-    <loc>https://uprightclear.github.io/tags/</loc>
+    <loc>uprightclear.github.io/tags/</loc>
   </url>
   
 </urlset>

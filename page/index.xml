@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on uprightclear</title>
-    <link>https://uprightclear.github.io/page/</link>
+    <link>uprightclear.github.io/page/</link>
     <description>Recent content in Pages on uprightclear</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>除非特别声明，本站采用[Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).</copyright>
     <lastBuildDate>Mon, 24 Feb 2020 12:35:25 +0800</lastBuildDate>
     
-	<atom:link href="https://uprightclear.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="uprightclear.github.io/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>联系</title>
-      <link>https://uprightclear.github.io/%E8%81%94%E7%B3%BB/</link>
+      <link>uprightclear.github.io/%E8%81%94%E7%B3%BB/</link>
       <pubDate>Mon, 24 Feb 2020 12:35:25 +0800</pubDate>
       
-      <guid>https://uprightclear.github.io/%E8%81%94%E7%B3%BB/</guid>
+      <guid>uprightclear.github.io/%E8%81%94%E7%B3%BB/</guid>
       <description>邮箱:uprightclear@gmail.com
 微博:https://weibo.com/uprightclear
 B站:https://space.bilibili.com/10095445</description>
@@ -25,10 +25,10 @@ B站:https://space.bilibili.com/10095445</description>
     
     <item>
       <title>关于</title>
-      <link>https://uprightclear.github.io/%E5%85%B3%E4%BA%8E/</link>
+      <link>uprightclear.github.io/%E5%85%B3%E4%BA%8E/</link>
       <pubDate>Mon, 24 Feb 2020 12:34:51 +0800</pubDate>
       
-      <guid>https://uprightclear.github.io/%E5%85%B3%E4%BA%8E/</guid>
+      <guid>uprightclear.github.io/%E5%85%B3%E4%BA%8E/</guid>
       <description>uprightclear的个人主页 分享技术/分享生活</description>
     </item>
     

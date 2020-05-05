@@ -2,22 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on uprightclear</title>
-    <link>https://uprightclear.github.io/posts/</link>
+    <link>uprightclear.github.io/posts/</link>
     <description>Recent content in Posts on uprightclear</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>除非特别声明，本站采用[Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).</copyright>
-    <lastBuildDate>Tue, 05 May 2020 17:09:06 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2020 18:06:46 +0800</lastBuildDate>
     
-	<atom:link href="https://uprightclear.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="uprightclear.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>关于如何更新hugo博客</title>
+      <link>uprightclear.github.io/2020/05/update/</link>
+      <pubDate>Tue, 05 May 2020 18:06:46 +0800</pubDate>
+      
+      <guid>uprightclear.github.io/2020/05/update/</guid>
+      <description>创建新的markdown文件 hugo new posts/abcd.md 1.该命令执行后会在当前项目文件夹下posts目录中自动生成 abcd.md 文档，并附带文件生成时间等属性
+2.完成博客的攥写
+启动hugo hugo server 1.该命令用于启动hugo服务器，并生成本地地址
+2.在本地浏览器对页面进行预览确定页面显示没有错误
+生成public hugo --baseUrl=&amp;#34;uprightclear.github.io/&amp;#34; --buildDrafts 1.更新public文件夹
+cd public 2.进入public文件夹
+更新代码 1.查看当前的git仓库状态，可以使用git status
+git status 2.更新全部
+git add * 3.输入git commit -m “更新备注”
+git commit -m “更新备注” 4.先git pull,拉取当前分支最新代码（也就是获取GitHub上的最新代码信息，更新本地代码）
+git pull 5.push到远程master分支上（修改本地代码后，再更新GitHub上的代码）
+git push origin master </description>
+    </item>
+    
+    <item>
       <title>Leetcode 刷题报告 #1</title>
-      <link>https://uprightclear.github.io/2020/05/leetcode01/</link>
+      <link>uprightclear.github.io/2020/05/leetcode01/</link>
       <pubDate>Tue, 05 May 2020 17:09:06 +0800</pubDate>
       
-      <guid>https://uprightclear.github.io/2020/05/leetcode01/</guid>
+      <guid>uprightclear.github.io/2020/05/leetcode01/</guid>
       <description>1.两数之和 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。
 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
 示例:
@@ -29,10 +49,10 @@
     
     <item>
       <title>My First Blog</title>
-      <link>https://uprightclear.github.io/2020/02/my-first-blog/</link>
+      <link>uprightclear.github.io/2020/02/my-first-blog/</link>
       <pubDate>Mon, 24 Feb 2020 11:30:04 +0800</pubDate>
       
-      <guid>https://uprightclear.github.io/2020/02/my-first-blog/</guid>
+      <guid>uprightclear.github.io/2020/02/my-first-blog/</guid>
       <description>这个博客主要就是用来记录一下我的学习历程，偶尔可能会写一些其他杂七杂八的东西。还有markdown格式我还是需要再好好研究一下QAQ。</description>
     </item>
     
