@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Leetcode 刷题报告 #13" />
+<meta property="og:description" content="13.罗马数字转整数 罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。
+   字符 数值     I 1   V 5   X 10   L 50   C 100   D 500   M 1000    例如， 罗马数字 2 写做 II ，即为两个并列的 1。12 写做 XII ，即为 X &#43; II 。 27 写做 XXVII, 即为 XX &#43; V &#43; II 。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="uprightclear.github.io/2020/05/leetcode04/" />
+<meta property="article:published_time" content="2020-05-07T08:38:00+08:00" />
+<meta property="article:modified_time" content="2020-05-07T08:38:00+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Leetcode 刷题报告 #13"/>
+<meta name="twitter:description" content="13.罗马数字转整数 罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。
+   字符 数值     I 1   V 5   X 10   L 50   C 100   D 500   M 1000    例如， 罗马数字 2 写做 II ，即为两个并列的 1。12 写做 XII ，即为 X &#43; II 。 27 写做 XXVII, 即为 XX &#43; V &#43; II 。"/>
+<meta name="generator" content="Hugo 0.64.1" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Leetcode 刷题报告 #13",
+  "url": "uprightclear.github.io\/2020\/05\/leetcode04\/",
+  "wordCount": "257",
+  "datePublished": "2020-05-07T08:38:00+08:00",
+  "dateModified": "2020-05-07T08:38:00+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "uprightclear"
+  }
+}
+</script>
+
+
+
+    <link rel="canonical" href="uprightclear.github.io/2020/05/leetcode04/">
+
+    <title>Leetcode 刷题报告 #13 | uprightclear</title>
+
+    
+    <!-- combined, minified CSS -->
+    
+    <link href="/uprightclear.github.io/css/style.6da5c906cc7a8fbb93f31cd2316c5dbe3f19ac4aa6bfb066f1243045b8f6061e.css" rel="stylesheet" integrity="sha256-baXJBsx6j7uT8xzSMWxdvj8ZrEqmv7Bm8SQwRbj2Bh4=" crossorigin="anonymous">
+    
+
+    <!-- minified Font Awesome for SVG icons -->
+    
+    <script defer src="/uprightclear.github.io/js/fontawesome.min.90e14c13cee52929ac33e1c21694a3cc95063a194eb22aad9f7976434e1a9125.js" integrity="sha256-kOFME87lKSmsM&#43;HCFpSjzJUGOhlOsiqtn3l2Q04akSU=" crossorigin="anonymous"></script>
+
+    <!-- RSS 2.0 feed -->
+    
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="uprightclear.github.io/uprightclear.github.io/">首页</a>
+          
+          <a class="nav-link" href="uprightclear.github.io/%E5%85%B3%E4%BA%8E/" title="关于">关于</a>
+          
+          
+          <a class="nav-link" href="uprightclear.github.io/%E8%81%94%E7%B3%BB/" title="联系">联系</a>
+          
+        </nav>
+      </div>
+    </div>
+    
+
+    
+    
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-title" dir="auto"><a href="uprightclear.github.io/uprightclear.github.io/" rel="home">uprightclear</a></h1>
+        <p class="lead blog-description" dir="auto">Share Life and Tech</p>
+      </div>
+    </header>
+    
+    
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode04/">Leetcode 刷题报告 #13</a></h2>
+    <p class="blog-post-meta"><time datetime="2020-05-07T08:38:00&#43;08:00">2020年05月07日</time> by uprightclear</p>
+  </header>
+  <h2 id="13罗马数字转整数">13.罗马数字转整数</h2>
+<p>罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。</p>
+<table>
+<thead>
+<tr>
+<th align="right">字符</th>
+<th align="right">数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">I</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="right">V</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td align="right">X</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td align="right">L</td>
+<td align="right">50</td>
+</tr>
+<tr>
+<td align="right">C</td>
+<td align="right">100</td>
+</tr>
+<tr>
+<td align="right">D</td>
+<td align="right">500</td>
+</tr>
+<tr>
+<td align="right">M</td>
+<td align="right">1000</td>
+</tr>
+</tbody>
+</table>
+<p>例如， 罗马数字 2 写做 II ，即为两个并列的 1。12 写做 XII ，即为 X + II 。 27 写做  XXVII, 即为 XX + V + II 。</p>
+<p>通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 IIII，而是 IV。数字 1 在数字 5 的左边，所表示的数等于大数 5 减小数 1 得到的数值 4 。同样地，数字 9 表示为 IX。这个特殊的规则只适用于以下六种情况：</p>
+<p>I 可以放在 V (5) 和 X (10) 的左边，来表示 4 和 9。
+X 可以放在 L (50) 和 C (100) 的左边，来表示 40 和 90。 
+C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。
+给定一个罗马数字，将其转换成整数。输入确保在 1 到 3999 的范围内。</p>
+<p>示例 1:</p>
+<p>输入: &ldquo;III&rdquo;
+输出: 3</p>
+<p>示例 2:</p>
+<p>输入: &ldquo;IV&rdquo;
+输出: 4</p>
+<p>示例 3:</p>
+<p>输入: &ldquo;IX&rdquo;
+输出: 9</p>
+<p>示例 4:</p>
+<p>输入: &ldquo;LVIII&rdquo;
+输出: 58
+解释: L = 50, V= 5, III = 3.</p>
+<p>示例 5:</p>
+<p>输入: &ldquo;MCMXCIV&rdquo;
+输出: 1994
+解释: M = 1000, CM = 900, XC = 90, IV = 4.</p>
+<p>来源：力扣（LeetCode）
+链接：<a href="https://leetcode-cn.com/problems/roman-to-integer">https://leetcode-cn.com/problems/roman-to-integer</a>
+著作权归领扣网络所有。</p>
+<h2 id="题解java">题解(Java)</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">romanToInt</span><span style="color:#f92672">(</span>String s<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> preNum <span style="color:#f92672">=</span> getValue<span style="color:#f92672">(</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>0<span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>i <span style="color:#f92672">&lt;</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span> i <span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> num <span style="color:#f92672">=</span> getValue<span style="color:#f92672">(</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>preNum <span style="color:#f92672">&lt;</span> num<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                sum <span style="color:#f92672">-</span><span style="color:#f92672">=</span> preNum<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                sum <span style="color:#f92672">+</span><span style="color:#f92672">=</span> preNum<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            preNum <span style="color:#f92672">=</span> num<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        sum <span style="color:#f92672">+</span><span style="color:#f92672">=</span> preNum<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> sum<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getValue</span><span style="color:#f92672">(</span><span style="color:#66d9ef">char</span> ch<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">switch</span><span style="color:#f92672">(</span>ch<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;I&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">return</span> 1<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;V&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">return</span> 5<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;X&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">return</span> 10<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;L&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">return</span> 50<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;C&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">return</span> 100<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;D&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">return</span> 500<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;M&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">return</span> 1000<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="思路">思路</h2>
+<p>本题的难点在于判断罗马数字的数字间大小关系，若前一个数字大于后者，则采用减法进行最终值求解，反之，则采用加法求解。从头到尾依次循环遍历，最终返回结果。</p>
+<p>为了计算罗马数字数值，创建一个getValue方法，采用switch结构，使不同罗马数字对应不同的整数数值。</p>
+
+
+  
+
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>关于</h4>
+    <p dir="auto">欢迎访问我的个人主页</p>
+  </section>
+  
+
+  
+        <section class="sidebar-module">
+    <h4>最近日志</h4>
+    <ol class="list-unstyled">
+
+
+<li><a href="uprightclear.github.io/2020/05/leetcode04/">Leetcode 刷题报告 #13</a></li>
+
+<li><a href="uprightclear.github.io/2020/05/leetcode03/">Leetcode 刷题报告 #9</a></li>
+
+<li><a href="uprightclear.github.io/2020/05/leetcode02/">Leetcode 刷题报告 #7</a></li>
+
+<li><a href="uprightclear.github.io/2020/05/update/">关于如何更新hugo博客</a></li>
+
+    </ol>
+  </section>
+
+  
+
+  
+  <section class="sidebar-module">
+    <h4>链接</h4>
+    <ol class="list-unstyled">
+      
+      <li><a href="https://github.com/uprightclear">github</a></li>
+      
+      <li><a href="https://weibo.com/uprightclear">weibo</a></li>
+      
+    </ol>
+  </section>
+  
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+    
+
+    
+    <footer class="blog-footer">
+      <p dir="auto">
+      
+      除非特别声明，本站采用<a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 International license</a>.
+      
+      </p>
+      <p>
+      <a href="#">返回顶部</a>
+      </p>
+    </footer>
+    
+
+  </body>
+
+</html>
