@@ -7,10 +7,59 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>除非特别声明，本站采用[Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).</copyright>
-    <lastBuildDate>Thu, 07 May 2020 10:02:26 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 08 May 2020 14:45:15 +0800</lastBuildDate>
     
 	<atom:link href="uprightclear.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Leetcode 刷题报告 #21</title>
+      <link>uprightclear.github.io/2020/05/leetcode07/</link>
+      <pubDate>Fri, 08 May 2020 14:45:15 +0800</pubDate>
+      
+      <guid>uprightclear.github.io/2020/05/leetcode07/</guid>
+      <description>21. 合并两个有序链表 将两个升序链表合并为一个新的升序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+示例：
+输入：1-&amp;gt;2-&amp;gt;4, 1-&amp;gt;3-&amp;gt;4
+输出：1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/merge-two-sorted-lists 著作权归领扣网络所有。
+题解(Java) /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode mergeTwoLists(ListNode l1, ListNode l2) { if (l1 == null) { return l2; } else if (l2 == null) { return l1; } else if (l1.</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 刷题报告 #20</title>
+      <link>uprightclear.github.io/2020/05/leetcode06/</link>
+      <pubDate>Fri, 08 May 2020 14:24:17 +0800</pubDate>
+      
+      <guid>uprightclear.github.io/2020/05/leetcode06/</guid>
+      <description>20.有效的括号 给定一个只包括 &amp;lsquo;(&#39;，&#39;)&#39;，&#39;{&#39;，&#39;}&#39;，&#39;[&#39;，&#39;]&amp;rsquo; 的字符串，判断字符串是否有效。
+有效字符串需满足：
+左括号必须用相同类型的右括号闭合。 左括号必须以正确的顺序闭合。 注意空字符串可被认为是有效字符串。
+示例
+   输入 输出     &amp;ldquo;()&amp;rdquo; true   &amp;ldquo;()[]{}&amp;rdquo; true   &amp;ldquo;(]&amp;rdquo; false   &amp;ldquo;{[]}&amp;rdquo; true    来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/valid-parentheses 著作权归领扣网络所有。
+题解(Java) class Solution { // Hash table that takes care of the mappings.</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 刷题报告 #14</title>
+      <link>uprightclear.github.io/2020/05/leetcode05/</link>
+      <pubDate>Fri, 08 May 2020 14:10:29 +0800</pubDate>
+      
+      <guid>uprightclear.github.io/2020/05/leetcode05/</guid>
+      <description>14.最长公共前缀 编写一个函数来查找字符串数组中的最长公共前缀。
+如果不存在公共前缀，返回空字符串 &amp;ldquo;&amp;quot;。
+示例 1:
+输入: [&amp;ldquo;flower&amp;rdquo;,&amp;ldquo;flow&amp;rdquo;,&amp;ldquo;flight&amp;rdquo;]
+输出: &amp;ldquo;fl&amp;rdquo;
+示例 2:
+输入: [&amp;ldquo;dog&amp;rdquo;,&amp;ldquo;racecar&amp;rdquo;,&amp;ldquo;car&amp;rdquo;]
+输出: &amp;quot;&amp;rdquo;
+解释: 输入不存在公共前缀。
+说明:
+所有输入只包含小写字母 a-z 。
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/longest-common-prefix 著作权归领扣网络所有。
+题解(Java) class Solution { public String longestCommonPrefix(String[] strs) { if (strs.length == 0) return &amp;#34;&amp;#34;; String prefix = strs[0]; for (int i = 1; i &amp;lt; strs.</description>
+    </item>
     
     <item>
       <title>Markdown基础语法</title>
