@@ -102,6 +102,77 @@
 
 <article class="blog-post">
   <header>
+    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode05/">Leetcode 刷题报告 #14</a></h2>
+    <p class="blog-post-meta"><time datetime="2020-05-08T14:10:29&#43;08:00">2020年05月08日</time> by uprightclear</p>
+  </header>
+  14.最长公共前缀 编写一个函数来查找字符串数组中的最长公共前缀。
+如果不存在公共前缀，返回空字符串 &ldquo;&quot;。
+示例 1:
+输入: [&ldquo;flower&rdquo;,&ldquo;flow&rdquo;,&ldquo;flight&rdquo;]
+输出: &ldquo;fl&rdquo;
+示例 2:
+输入: [&ldquo;dog&rdquo;,&ldquo;racecar&rdquo;,&ldquo;car&rdquo;]
+输出: &quot;&rdquo;
+解释: 输入不存在公共前缀。
+说明:
+所有输入只包含小写字母 a-z 。
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/longest-common-prefix 著作权归领扣网络所有。
+题解(Java) class Solution { public String longestCommonPrefix(String[] strs) { if (strs.length == 0) return &#34;&#34;; String prefix = strs[0]; for (int i = 1; i &lt; strs.
+  <a href='uprightclear.github.io/2020/05/leetcode05/'>更多 →</a>
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/markdown-grammar/">Markdown基础语法</a></h2>
+    <p class="blog-post-meta"><time datetime="2020-05-07T10:02:26&#43;08:00">2020年05月07日</time> by 转载</p>
+  </header>
+  Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。
+相比WYSIWYG编辑器
+优点： 1、因为是纯文本，所以只要支持Markdown的地方都能获得一样的编辑效果，可以让作者摆脱排版的困扰，专心写作。 2、操作简单。比如:WYSIWYG编辑时标记个标题，先选中内容，再点击导航栏的标题按钮，选择几级标题。要三个步骤。而Markdown只需要在标题内容前加#即可
+缺点： 1、需要记一些语法（当然，是很简单。五分钟学会）。 2、有些平台不支持Markdown编辑模式。
+一、标题 在想要设置为标题的文字前面加#来表示 一个#是一级标题，二个#是二级标题，以此类推。支持六级标题。
+注：标准语法一般在#后跟个空格再写文字，貌似简书不加空格也行。
+示例：
+# 这是一级标题 ## 这是二级标题 ### 这是三级标题 #### 这是四级标题 ##### 这是五级标题 ###### 这是六级标题 效果如下：
+这是一级标题 这是二级标题 这是三级标题 这是四级标题 这是五级标题 这是六级标题 二、字体 加粗 要加粗的文字左右分别用两个*号包起来
+斜体 要倾斜的文字左右分别用一个*号包起来
+斜体加粗 要倾斜和加粗的文字左右分别用三个*号包起来
+删除线 要加删除线的文字左右分别用两个~~号包起来
+示例：
+**这是加粗的文字** *这是倾斜的文字*` ***这是斜体加粗的文字*** ~~这是加删除线的文字~~ 效果如下：
+这是加粗的文字
+这是倾斜的文字`
+这是斜体加粗的文字
+  <a href='uprightclear.github.io/2020/05/markdown-grammar/'>更多 →</a>
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode04/">Leetcode 刷题报告 #13</a></h2>
+    <p class="blog-post-meta"><time datetime="2020-05-07T08:38:00&#43;08:00">2020年05月07日</time> by uprightclear</p>
+  </header>
+  13.罗马数字转整数 罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。
+   字符 数值     I 1   V 5   X 10   L 50   C 100   D 500   M 1000    例如， 罗马数字 2 写做 II ，即为两个并列的 1。12 写做 XII ，即为 X + II 。 27 写做 XXVII, 即为 XX + V + II 。
+  <a href='uprightclear.github.io/2020/05/leetcode04/'>更多 →</a>
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
     <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode03/">Leetcode 刷题报告 #9</a></h2>
     <p class="blog-post-meta"><time datetime="2020-05-07T08:11:14&#43;08:00">2020年05月07日</time> by uprightclear</p>
   </header>
@@ -144,70 +215,11 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/update/">关于如何更新hugo博客</a></h2>
-    <p class="blog-post-meta"><time datetime="2020-05-05T18:06:46&#43;08:00">2020年05月05日</time> by uprightclear</p>
-  </header>
-  创建新的markdown文件 hugo new posts/abcd.md 1.该命令执行后会在当前项目文件夹下posts目录中自动生成 abcd.md 文档，并附带文件生成时间等属性
-2.完成博客的攥写
-启动hugo hugo server 1.该命令用于启动hugo服务器，并生成本地地址
-2.在本地浏览器对页面进行预览确定页面显示没有错误
-生成public hugo --baseUrl=&#34;uprightclear.github.io/&#34; --buildDrafts 1.更新public文件夹
-cd public 2.进入public文件夹
-更新代码 1.查看当前的git仓库状态，可以使用git status
-git status 2.更新全部
-git add * 3.输入git commit -m “更新备注”
-git commit -m “更新备注” 4.先git pull,拉取当前分支最新代码（也就是获取GitHub上的最新代码信息，更新本地代码）
-git pull 5.push到远程master分支上（修改本地代码后，再更新GitHub上的代码）
-git push origin master 
-  <a href='uprightclear.github.io/2020/05/update/'>更多 →</a>
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode01/">Leetcode 刷题报告 #1</a></h2>
-    <p class="blog-post-meta"><time datetime="2020-05-05T17:09:06&#43;08:00">2020年05月05日</time> by uprightclear</p>
-  </header>
-  1.两数之和 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。
-你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
-示例:
-给定 nums = [2, 7, 11, 15], target = 9
-因为 nums[0] + nums[1] = 2 + 7 = 9 所以返回 [0, 1]
-来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/two-sum 著作权归领扣网络所有。
-题解(Java) class Solution {public int[] twoSum(int[] nums, int target) {Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();for (int i = 0; i &lt; nums.
-  <a href='uprightclear.github.io/2020/05/leetcode01/'>更多 →</a>
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/02/my-first-blog/">My First Blog</a></h2>
-    <p class="blog-post-meta"><time datetime="2020-02-24T11:30:04&#43;08:00">2020年02月24日</time> by uprightclear</p>
-  </header>
-  这个博客主要就是用来记录一下我的学习历程，偶尔可能会写一些其他杂七杂八的东西。还有markdown格式我还是需要再好好研究一下QAQ。
-  <a href='uprightclear.github.io/2020/02/my-first-blog/'>更多 →</a>
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
-  
   <a class="btn btn-outline-primary" href="uprightclear.github.io/categories/" rel="prev" role="button">上一页</a>
-  <a class="btn btn-outline-primary disabled" href="#" role="button" aria-disabled="true">下一页</a>
+  <a class="btn btn-outline-primary" href="uprightclear.github.io/categories/page/3/" rel="next" role="button">下一页</a>
+  
   
   
 </nav>
@@ -232,13 +244,13 @@ git push origin master
     <ol class="list-unstyled">
 
 
+<li><a href="uprightclear.github.io/2020/05/leetcode10/">Leetcode 刷题报告 #28</a></li>
+
+<li><a href="uprightclear.github.io/2020/05/leetcode09/">Leetcode 刷题报告 #27</a></li>
+
+<li><a href="uprightclear.github.io/2020/05/leetcode08/">Leetcode 刷题报告 #26</a></li>
+
 <li><a href="uprightclear.github.io/2020/05/leetcode07/">Leetcode 刷题报告 #21</a></li>
-
-<li><a href="uprightclear.github.io/2020/05/leetcode06/">Leetcode 刷题报告 #20</a></li>
-
-<li><a href="uprightclear.github.io/2020/05/leetcode05/">Leetcode 刷题报告 #14</a></li>
-
-<li><a href="uprightclear.github.io/2020/05/markdown-grammar/">Markdown基础语法</a></li>
 
     </ol>
   </section>
