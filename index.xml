@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>除非特别声明，本站采用[Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).</copyright>
-    <lastBuildDate>Sun, 10 May 2020 14:38:05 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2020 09:21:47 +0800</lastBuildDate>
     
 	<atom:link href="uprightclear.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Leetcode 刷题报告 #58</title>
+      <link>uprightclear.github.io/2020/05/leetcode14/</link>
+      <pubDate>Mon, 11 May 2020 09:21:47 +0800</pubDate>
+      
+      <guid>uprightclear.github.io/2020/05/leetcode14/</guid>
+      <description>58.最后一个单词的长度 给定一个仅包含大小写字母和空格 &#39; &#39; 的字符串 s，返回其最后一个单词的长度。如果字符串从左向右滚动显示，那么最后一个单词就是最后出现的单词。
+如果不存在最后一个单词，请返回 0 。
+说明：一个单词是指仅由字母组成、不包含任何空格字符的 最大子字符串。
+示例:
+输入: &amp;ldquo;Hello World&amp;rdquo; 输出: 5
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/length-of-last-word 著作权归领扣网络所有。
+题解(Java) class Solution { public int lengthOfLastWord(String s) { int end = s.length() - 1; while(end &amp;gt;= 0 &amp;amp;&amp;amp; s.charAt(end) == &amp;#39; &amp;#39;) end--; if(end &amp;lt; 0) return 0; int start = end; while(start &amp;gt;= 0 &amp;amp;&amp;amp; s.</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 刷题报告 #53</title>
+      <link>uprightclear.github.io/2020/05/leetcode13/</link>
+      <pubDate>Mon, 11 May 2020 09:21:31 +0800</pubDate>
+      
+      <guid>uprightclear.github.io/2020/05/leetcode13/</guid>
+      <description>53.最大子序和 给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
+示例:
+输入: [-2,1,-3,4,-1,2,1,-5,4], 输出: 6 解释: 连续子数组 [4,-1,2,1] 的和最大，为 6。
+题解(Java) class Solution { public int maxSubArray(int[] nums) { int ans = nums[0]; int sum = 0; for(int num: nums) { if(sum &amp;gt; 0) { sum += num; } else { sum = num; } ans = Math.</description>
+    </item>
     
     <item>
       <title>Leetcode 刷题报告 #38</title>
