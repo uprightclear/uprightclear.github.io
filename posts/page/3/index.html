@@ -9,7 +9,7 @@
 <meta property="og:description" content="Share Life and Tech" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="uprightclear.github.io/posts/" />
-<meta property="og:updated_time" content="2020-05-11T09:21:47+08:00" />
+<meta property="og:updated_time" content="2020-05-12T18:11:15+08:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -28,7 +28,7 @@
     "@type": "Person",
     "name": "uprightclear"
   },
-  "dateModified": "2020-05-11T09:21:47+08:00",
+  "dateModified": "2020-05-12T18:11:15+08:00",
   "keywords": "",
   "description": "Share Life and Tech"
 }
@@ -103,6 +103,51 @@
 
 <article class="blog-post">
   <header>
+    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode06/">Leetcode 刷题报告 #20</a></h2>
+    <p class="blog-post-meta"><time datetime="2020-05-08T14:24:17&#43;08:00">2020年05月08日</time> by uprightclear</p>
+  </header>
+  20.有效的括号 给定一个只包括 &lsquo;('，')'，'{'，'}'，'['，']&rsquo; 的字符串，判断字符串是否有效。
+有效字符串需满足：
+左括号必须用相同类型的右括号闭合。 左括号必须以正确的顺序闭合。 注意空字符串可被认为是有效字符串。
+示例
+   输入 输出     &ldquo;()&rdquo; true   &ldquo;()[]{}&rdquo; true   &ldquo;(]&rdquo; false   &ldquo;{[]}&rdquo; true    来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/valid-parentheses 著作权归领扣网络所有。
+题解(Java) class Solution { // Hash table that takes care of the mappings.
+  <a href='uprightclear.github.io/2020/05/leetcode06/'>更多 →</a>
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode05/">Leetcode 刷题报告 #14</a></h2>
+    <p class="blog-post-meta"><time datetime="2020-05-08T14:10:29&#43;08:00">2020年05月08日</time> by uprightclear</p>
+  </header>
+  14.最长公共前缀 编写一个函数来查找字符串数组中的最长公共前缀。
+如果不存在公共前缀，返回空字符串 &ldquo;&quot;。
+示例 1:
+输入: [&ldquo;flower&rdquo;,&ldquo;flow&rdquo;,&ldquo;flight&rdquo;]
+输出: &ldquo;fl&rdquo;
+示例 2:
+输入: [&ldquo;dog&rdquo;,&ldquo;racecar&rdquo;,&ldquo;car&rdquo;]
+输出: &quot;&rdquo;
+解释: 输入不存在公共前缀。
+说明:
+所有输入只包含小写字母 a-z 。
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/longest-common-prefix 著作权归领扣网络所有。
+题解(Java) class Solution { public String longestCommonPrefix(String[] strs) { if (strs.length == 0) return &#34;&#34;; String prefix = strs[0]; for (int i = 1; i &lt; strs.
+  <a href='uprightclear.github.io/2020/05/leetcode05/'>更多 →</a>
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
     <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/markdown-grammar/">Markdown基础语法</a></h2>
     <p class="blog-post-meta"><time datetime="2020-05-07T10:02:26&#43;08:00">2020年05月07日</time> by 转载</p>
   </header>
@@ -166,55 +211,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode02/">Leetcode 刷题报告 #7</a></h2>
-    <p class="blog-post-meta"><time datetime="2020-05-06T08:31:40&#43;08:00">2020年05月06日</time> by uprightclear</p>
-  </header>
-  7.整数反转 给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
-示例 1:
-输入: 123 输出: 321
-示例 2:
-输入: -123 输出: -321
-示例 3:
-输入: 120 输出: 21
-注意:
-假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−231,231 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。
-来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/reverse-integer 著作权归领扣网络所有。
-题解(Java) class Solution { public int reverse(int x) { int ans = 0; while (x != 0) { if ((ans * 10) / 10 !
-  <a href='uprightclear.github.io/2020/05/leetcode02/'>更多 →</a>
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/update/">关于如何更新hugo博客</a></h2>
-    <p class="blog-post-meta"><time datetime="2020-05-05T18:06:46&#43;08:00">2020年05月05日</time> by uprightclear</p>
-  </header>
-  创建新的markdown文件 hugo new posts/abcd.md 1.该命令执行后会在当前项目文件夹下posts目录中自动生成 abcd.md 文档，并附带文件生成时间等属性
-2.完成博客的攥写
-启动hugo hugo server 1.该命令用于启动hugo服务器，并生成本地地址
-2.在本地浏览器对页面进行预览确定页面显示没有错误
-生成public hugo --baseUrl=&#34;uprightclear.github.io/&#34; --buildDrafts 1.更新public文件夹
-cd public 2.进入public文件夹
-更新代码 1.查看当前的git仓库状态，可以使用git status
-git status 2.更新全部
-git add * 3.输入git commit -m “更新备注”
-git commit -m “更新备注” 4.先git pull,拉取当前分支最新代码（也就是获取GitHub上的最新代码信息，更新本地代码）
-git pull 5.push到远程master分支上（修改本地代码后，再更新GitHub上的代码）
-git push origin master 
-  <a href='uprightclear.github.io/2020/05/update/'>更多 →</a>
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="uprightclear.github.io/posts/page/2/" rel="prev" role="button">上一页</a>
@@ -244,13 +240,13 @@ git push origin master
     <ol class="list-unstyled">
 
 
+<li><a href="uprightclear.github.io/2020/05/leetcode16/">Leetcode 刷题报告 #67</a></li>
+
+<li><a href="uprightclear.github.io/2020/05/leetcode15/">Leetcode 刷题报告 #66</a></li>
+
 <li><a href="uprightclear.github.io/2020/05/leetcode14/">Leetcode 刷题报告 #58</a></li>
 
 <li><a href="uprightclear.github.io/2020/05/leetcode13/">Leetcode 刷题报告 #53</a></li>
-
-<li><a href="uprightclear.github.io/2020/05/leetcode12/">Leetcode 刷题报告 #38</a></li>
-
-<li><a href="uprightclear.github.io/2020/05/leetcode11/">Leetcode 刷题报告 #35</a></li>
 
     </ol>
   </section>
