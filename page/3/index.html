@@ -9,7 +9,7 @@
 <meta property="og:description" content="Share Life and Tech" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="uprightclear.github.io/" />
-<meta property="og:updated_time" content="2020-05-12T18:11:15+08:00" />
+<meta property="og:updated_time" content="2020-05-13T10:23:08+08:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="uprightclear"/>
@@ -28,7 +28,7 @@
     "@type": "Person",
     "name": "uprightclear"
   },
-  "dateModified": "2020-05-12T18:11:15+08:00",
+  "dateModified": "2020-05-13T10:23:08+08:00",
   "keywords": "",
   "description": "Share Life and Tech"
 }
@@ -95,6 +95,49 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode08/">Leetcode 刷题报告 #26</a></h2>
+    <p class="blog-post-meta"><time datetime="2020-05-09T10:27:07&#43;08:00">2020年05月09日</time> by uprightclear</p>
+  </header>
+  26. 删除排序数组中的重复项 给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
+不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
+示例 1:
+给定数组 nums = [1,1,2],
+函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。
+你不需要考虑数组中超出新长度后面的元素。
+示例 2:
+给定 nums = [0,0,1,1,1,2,2,3,3,4],
+函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。
+你不需要考虑数组中超出新长度后面的元素。
+题解(Java) class Solution { public int removeDuplicates(int[] nums) { if(nums == null || nums.
+  <a href='uprightclear.github.io/2020/05/leetcode08/'>更多 →</a>
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode07/">Leetcode 刷题报告 #21</a></h2>
+    <p class="blog-post-meta"><time datetime="2020-05-08T14:45:15&#43;08:00">2020年05月08日</time> by uprightclear</p>
+  </header>
+  21. 合并两个有序链表 将两个升序链表合并为一个新的升序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+示例：
+输入：1-&gt;2-&gt;4, 1-&gt;3-&gt;4
+输出：1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/merge-two-sorted-lists 著作权归领扣网络所有。
+题解(Java) /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode mergeTwoLists(ListNode l1, ListNode l2) { if (l1 == null) { return l2; } else if (l2 == null) { return l1; } else if (l1.
+  <a href='uprightclear.github.io/2020/05/leetcode07/'>更多 →</a>
+</article> 
 
 
 
@@ -175,42 +218,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode04/">Leetcode 刷题报告 #13</a></h2>
-    <p class="blog-post-meta"><time datetime="2020-05-07T08:38:00&#43;08:00">2020年05月07日</time> by uprightclear</p>
-  </header>
-  13.罗马数字转整数 罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。
-   字符 数值     I 1   V 5   X 10   L 50   C 100   D 500   M 1000    例如， 罗马数字 2 写做 II ，即为两个并列的 1。12 写做 XII ，即为 X + II 。 27 写做 XXVII, 即为 XX + V + II 。
-  <a href='uprightclear.github.io/2020/05/leetcode04/'>更多 →</a>
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode03/">Leetcode 刷题报告 #9</a></h2>
-    <p class="blog-post-meta"><time datetime="2020-05-07T08:11:14&#43;08:00">2020年05月07日</time> by uprightclear</p>
-  </header>
-  9.回文数 判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。
-示例 1:
-输入: 121 输出: true
-示例 2:
-输入: -121 输出: false 解释: 从左向右读, 为 -121 。 从右向左读, 为 121- 。因此它不是一个回文数。
-示例 3:
-输入: 10 输出: false 解释: 从右向左读, 为 01 。因此它不是一个回文数。
-题解(Java) class Solution { public boolean isPalindrome(int x) { if(x &lt; 0) return false; int cur = 0; int num = x; while(num !
-  <a href='uprightclear.github.io/2020/05/leetcode03/'>更多 →</a>
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="uprightclear.github.io/page/2/" rel="prev" role="button">上一页</a>
@@ -240,13 +247,13 @@
     <ol class="list-unstyled">
 
 
+<li><a href="uprightclear.github.io/2020/05/leetcode18/">Leetcode 刷题报告 #70</a></li>
+
+<li><a href="uprightclear.github.io/2020/05/leetcode17/">Leetcode 刷题报告 #69</a></li>
+
 <li><a href="uprightclear.github.io/2020/05/leetcode16/">Leetcode 刷题报告 #67</a></li>
 
 <li><a href="uprightclear.github.io/2020/05/leetcode15/">Leetcode 刷题报告 #66</a></li>
-
-<li><a href="uprightclear.github.io/2020/05/leetcode14/">Leetcode 刷题报告 #58</a></li>
-
-<li><a href="uprightclear.github.io/2020/05/leetcode13/">Leetcode 刷题报告 #53</a></li>
 
     </ol>
   </section>

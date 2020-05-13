@@ -103,6 +103,46 @@
 
 <article class="blog-post">
   <header>
+    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode18/">Leetcode 刷题报告 #70</a></h2>
+    <p class="blog-post-meta"><time datetime="2020-05-13T10:23:08&#43;08:00">2020年05月13日</time> by uprightclear</p>
+  </header>
+  70.爬楼梯 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
+每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
+注意：给定 n 是一个正整数。
+题解(Java) public class Solution { public int climbStairs(int n) { climb_Stairs(0, n); } public int climb_Stairs(int i, int n) { if (i &gt; n) { return 0; } if (i == n) { return 1; } return climb_Stairs(i + 1, n) + climb_Stairs(i + 2, n); } } 思路 在暴力法中，我们将会把所有可能爬的阶数进行组合，也就是 1 和 2 。而在每一步中我们都会继续调用 climbStairsclimbStairs 这个函数模拟爬 11 阶和 22 阶的情形，并返回两个函数的返回值之和。
+  <a href='uprightclear.github.io/2020/05/leetcode18/'>更多 →</a>
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode17/">Leetcode 刷题报告 #69</a></h2>
+    <p class="blog-post-meta"><time datetime="2020-05-13T10:22:47&#43;08:00">2020年05月13日</time> by uprightclear</p>
+  </header>
+  69.x的平方根 实现 int sqrt(int x) 函数。
+计算并返回 x 的平方根，其中 x 是非负整数。
+由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。
+示例 1:
+输入: 4 输出: 2
+示例 2:
+输入: 8 输出: 2
+说明: 8 的平方根是 2.82842&hellip;, 由于返回类型是整数，小数部分将被舍去。
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/sqrtx 著作权归领扣网络所有。
+题解(Java) class Solution { public int mySqrt(int x) { if (x == 0) { return 0; } double C = x, x0 = x; while (true) { double xi = 0.
+  <a href='uprightclear.github.io/2020/05/leetcode17/'>更多 →</a>
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
     <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode16/">Leetcode 刷题报告 #67</a></h2>
     <p class="blog-post-meta"><time datetime="2020-05-12T18:11:15&#43;08:00">2020年05月12日</time> by uprightclear</p>
   </header>
@@ -163,43 +203,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode13/">Leetcode 刷题报告 #53</a></h2>
-    <p class="blog-post-meta"><time datetime="2020-05-11T09:21:31&#43;08:00">2020年05月11日</time> by uprightclear</p>
-  </header>
-  53.最大子序和 给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
-示例:
-输入: [-2,1,-3,4,-1,2,1,-5,4], 输出: 6 解释: 连续子数组 [4,-1,2,1] 的和最大，为 6。
-题解(Java) class Solution { public int maxSubArray(int[] nums) { int ans = nums[0]; int sum = 0; for(int num: nums) { if(sum &gt; 0) { sum += num; } else { sum = num; } ans = Math.
-  <a href='uprightclear.github.io/2020/05/leetcode13/'>更多 →</a>
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode12/">Leetcode 刷题报告 #38</a></h2>
-    <p class="blog-post-meta"><time datetime="2020-05-10T14:38:05&#43;08:00">2020年05月10日</time> by uprightclear</p>
-  </header>
-  38.外观数列 「外观数列」是一个整数序列，从数字 1 开始，序列中的每一项都是对前一项的描述。前五项如下：
- 1 11 21 1211 111221  1 被读作 &ldquo;one 1&rdquo; (&ldquo;一个一&rdquo;) , 即 11。
-11 被读作 &ldquo;two 1s&rdquo; (&ldquo;两个一&rdquo;）, 即 21。
-21 被读作 &ldquo;one 2&rdquo;, &ldquo;one 1&rdquo; （&ldquo;一个二&rdquo; , &ldquo;一个一&rdquo;) , 即 1211。
-给定一个正整数 n（1 ≤ n ≤ 30），输出外观数列的第 n 项。
-注意：整数序列中的每一项将表示为一个字符串。
- 示例 1:
-  <a href='uprightclear.github.io/2020/05/leetcode12/'>更多 →</a>
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   
@@ -229,13 +232,13 @@
     <ol class="list-unstyled">
 
 
+<li><a href="uprightclear.github.io/2020/05/leetcode18/">Leetcode 刷题报告 #70</a></li>
+
+<li><a href="uprightclear.github.io/2020/05/leetcode17/">Leetcode 刷题报告 #69</a></li>
+
 <li><a href="uprightclear.github.io/2020/05/leetcode16/">Leetcode 刷题报告 #67</a></li>
 
 <li><a href="uprightclear.github.io/2020/05/leetcode15/">Leetcode 刷题报告 #66</a></li>
-
-<li><a href="uprightclear.github.io/2020/05/leetcode14/">Leetcode 刷题报告 #58</a></li>
-
-<li><a href="uprightclear.github.io/2020/05/leetcode13/">Leetcode 刷题报告 #53</a></li>
 
     </ol>
   </section>
