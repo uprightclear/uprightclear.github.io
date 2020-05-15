@@ -5,24 +5,34 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Leetcode 刷题报告 #70" />
-<meta property="og:description" content="70.爬楼梯 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
-每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
-注意：给定 n 是一个正整数。
-题解(Java) class Solution { public int singleNumber(int[] nums) { for (int i=1 ; i&lt;nums.length ; i&#43;&#43;) { nums[0] ^= nums[i]; } return nums[0]; } } 思路 在暴力法中，我们将会把所有可能爬的阶数进行组合，也就是 1 和 2 。而在每一步中我们都会继续调用 climbStairsclimbStairs 这个函数模拟爬 11 阶和 22 阶的情形，并返回两个函数的返回值之和。
-climbStairs(i,n)=(i&#43;1,n)&#43;climbStairs(i&#43;2,n)" />
+<meta property="og:title" content="Leetcode 刷题报告 #136" />
+<meta property="og:description" content="136.只出现一次的数字 给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
+说明：
+你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？
+示例 1:
+输入: [2,2,1] 输出: 1
+示例 2:
+输入: [4,1,2,1,2] 输出: 4
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/single-number 著作权归领扣网络所有。
+题解(Java) class Solution { public int singleNumber(int[] nums) { for (int i=1 ; i&lt;nums.length ; i&#43;&#43;) { nums[0] ^= nums[i]; } return nums[0]; } } 思路 使用异或运算，利用异或运算的性质：自己本身相异或为0，0与任何数字异或都等于它本身。
+a⊕b⊕a=b⊕a⊕a=b⊕(a⊕a)=b⊕0=b" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="uprightclear.github.io/2020/05/leetcode18/" />
-<meta property="article:published_time" content="2020-05-13T10:23:08+08:00" />
-<meta property="article:modified_time" content="2020-05-13T10:23:08+08:00" />
+<meta property="og:url" content="uprightclear.github.io/2020/05/leetcode20/" />
+<meta property="article:published_time" content="2020-05-15T17:36:15+08:00" />
+<meta property="article:modified_time" content="2020-05-15T17:36:15+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Leetcode 刷题报告 #70"/>
-<meta name="twitter:description" content="70.爬楼梯 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
-每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
-注意：给定 n 是一个正整数。
-题解(Java) class Solution { public int singleNumber(int[] nums) { for (int i=1 ; i&lt;nums.length ; i&#43;&#43;) { nums[0] ^= nums[i]; } return nums[0]; } } 思路 在暴力法中，我们将会把所有可能爬的阶数进行组合，也就是 1 和 2 。而在每一步中我们都会继续调用 climbStairsclimbStairs 这个函数模拟爬 11 阶和 22 阶的情形，并返回两个函数的返回值之和。
-climbStairs(i,n)=(i&#43;1,n)&#43;climbStairs(i&#43;2,n)"/>
+<meta name="twitter:title" content="Leetcode 刷题报告 #136"/>
+<meta name="twitter:description" content="136.只出现一次的数字 给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
+说明：
+你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？
+示例 1:
+输入: [2,2,1] 输出: 1
+示例 2:
+输入: [4,1,2,1,2] 输出: 4
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/single-number 著作权归领扣网络所有。
+题解(Java) class Solution { public int singleNumber(int[] nums) { for (int i=1 ; i&lt;nums.length ; i&#43;&#43;) { nums[0] ^= nums[i]; } return nums[0]; } } 思路 使用异或运算，利用异或运算的性质：自己本身相异或为0，0与任何数字异或都等于它本身。
+a⊕b⊕a=b⊕a⊕a=b⊕(a⊕a)=b⊕0=b"/>
 <meta name="generator" content="Hugo 0.64.1" />
 
 
@@ -31,11 +41,11 @@ climbStairs(i,n)=(i&#43;1,n)&#43;climbStairs(i&#43;2,n)"/>
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "Leetcode 刷题报告 #70",
-  "url": "uprightclear.github.io\/2020\/05\/leetcode18\/",
-  "wordCount": "59",
-  "datePublished": "2020-05-13T10:23:08+08:00",
-  "dateModified": "2020-05-13T10:23:08+08:00",
+  "headline": "Leetcode 刷题报告 #136",
+  "url": "uprightclear.github.io\/2020\/05\/leetcode20\/",
+  "wordCount": "48",
+  "datePublished": "2020-05-15T17:36:15+08:00",
+  "dateModified": "2020-05-15T17:36:15+08:00",
   "author": {
     "@type": "Person",
     "name": "uprightclear"
@@ -45,9 +55,9 @@ climbStairs(i,n)=(i&#43;1,n)&#43;climbStairs(i&#43;2,n)"/>
 
 
 
-    <link rel="canonical" href="uprightclear.github.io/2020/05/leetcode18/">
+    <link rel="canonical" href="uprightclear.github.io/2020/05/leetcode20/">
 
-    <title>Leetcode 刷题报告 #70 | uprightclear</title>
+    <title>Leetcode 刷题报告 #136 | uprightclear</title>
 
     
     <!-- combined, minified CSS -->
@@ -107,13 +117,22 @@ climbStairs(i,n)=(i&#43;1,n)&#43;climbStairs(i&#43;2,n)"/>
 
 <article class="blog-post">
   <header>
-    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode18/">Leetcode 刷题报告 #70</a></h2>
-    <p class="blog-post-meta"><time datetime="2020-05-13T10:23:08&#43;08:00">2020年05月13日</time> by uprightclear</p>
+    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode20/">Leetcode 刷题报告 #136</a></h2>
+    <p class="blog-post-meta"><time datetime="2020-05-15T17:36:15&#43;08:00">2020年05月15日</time> by uprightclear</p>
   </header>
-  <h2 id="70爬楼梯">70.爬楼梯</h2>
-<p>假设你正在爬楼梯。需要 n 阶你才能到达楼顶。</p>
-<p>每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？</p>
-<p>注意：给定 n 是一个正整数。</p>
+  <h2 id="136只出现一次的数字">136.只出现一次的数字</h2>
+<p>给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。</p>
+<p>说明：</p>
+<p>你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？</p>
+<p>示例 1:</p>
+<p>输入: [2,2,1]
+输出: 1</p>
+<p>示例 2:</p>
+<p>输入: [4,1,2,1,2]
+输出: 4</p>
+<p>来源：力扣（LeetCode）
+链接：<a href="https://leetcode-cn.com/problems/single-number">https://leetcode-cn.com/problems/single-number</a>
+著作权归领扣网络所有。</p>
 <h2 id="题解java">题解(Java)</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">singleNumber</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
@@ -124,13 +143,8 @@ climbStairs(i,n)=(i&#43;1,n)&#43;climbStairs(i&#43;2,n)"/>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><h2 id="思路">思路</h2>
-<p>在暴力法中，我们将会把所有可能爬的阶数进行组合，也就是 1 和 2 。而在每一步中我们都会继续调用 climbStairsclimbStairs 这个函数模拟爬 11 阶和 22 阶的情形，并返回两个函数的返回值之和。</p>
-<p>climbStairs(i,n)=(i+1,n)+climbStairs(i+2,n)</p>
-<p>其中 i 定义了当前阶数，而 n 定义了目标阶数。</p>
-<p>作者：LeetCode
-链接：<a href="https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-by-leetcode/">https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-by-leetcode/</a>
-来源：力扣（LeetCode）
-著作权归作者所有。</p>
+<p>使用异或运算，利用异或运算的性质：自己本身相异或为0，0与任何数字异或都等于它本身。</p>
+<p>a⊕b⊕a=b⊕a⊕a=b⊕(a⊕a)=b⊕0=b</p>
 
 
   

@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>除非特别声明，本站采用[Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).</copyright>
-    <lastBuildDate>Thu, 14 May 2020 11:08:28 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2020 17:36:15 +0800</lastBuildDate>
     
 	<atom:link href="uprightclear.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Leetcode 刷题报告 #136</title>
+      <link>uprightclear.github.io/2020/05/leetcode20/</link>
+      <pubDate>Fri, 15 May 2020 17:36:15 +0800</pubDate>
+      
+      <guid>uprightclear.github.io/2020/05/leetcode20/</guid>
+      <description>136.只出现一次的数字 给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
+说明：
+你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？
+示例 1:
+输入: [2,2,1] 输出: 1
+示例 2:
+输入: [4,1,2,1,2] 输出: 4
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/single-number 著作权归领扣网络所有。
+题解(Java) class Solution { public int singleNumber(int[] nums) { for (int i=1 ; i&amp;lt;nums.length ; i++) { nums[0] ^= nums[i]; } return nums[0]; } } 思路 使用异或运算，利用异或运算的性质：自己本身相异或为0，0与任何数字异或都等于它本身。
+a⊕b⊕a=b⊕a⊕a=b⊕(a⊕a)=b⊕0=b</description>
+    </item>
     
     <item>
       <title>Leetcode 刷题报告 #83</title>
@@ -36,7 +54,8 @@
       <description>70.爬楼梯 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
 注意：给定 n 是一个正整数。
-题解(Java) public class Solution { public int climbStairs(int n) { climb_Stairs(0, n); } public int climb_Stairs(int i, int n) { if (i &amp;gt; n) { return 0; } if (i == n) { return 1; } return climb_Stairs(i + 1, n) + climb_Stairs(i + 2, n); } } 思路 在暴力法中，我们将会把所有可能爬的阶数进行组合，也就是 1 和 2 。而在每一步中我们都会继续调用 climbStairsclimbStairs 这个函数模拟爬 11 阶和 22 阶的情形，并返回两个函数的返回值之和。</description>
+题解(Java) class Solution { public int singleNumber(int[] nums) { for (int i=1 ; i&amp;lt;nums.length ; i++) { nums[0] ^= nums[i]; } return nums[0]; } } 思路 在暴力法中，我们将会把所有可能爬的阶数进行组合，也就是 1 和 2 。而在每一步中我们都会继续调用 climbStairsclimbStairs 这个函数模拟爬 11 阶和 22 阶的情形，并返回两个函数的返回值之和。
+climbStairs(i,n)=(i+1,n)+climbStairs(i+2,n)</description>
     </item>
     
     <item>
