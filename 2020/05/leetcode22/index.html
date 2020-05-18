@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Leetcode 刷题报告 #210" />
+<meta property="og:description" content="210.课程表Ⅱ 现在你总共有 n 门课需要选，记为 0 到 n-1。
+在选修某些课程之前需要一些先修课程。 例如，想要学习课程 0 ，你需要先完成课程 1 ，我们用一个匹配来表示他们: [0,1]
+给定课程总量以及它们的先决条件，返回你为了学完所有课程所安排的学习顺序。
+可能会有多个正确的顺序，你只要返回一种就可以了。如果不可能完成所有课程，返回一个空数组。
+示例 1:
+输入: 2, [[1,0]]
+输出: [0,1]
+解释: 总共有 2 门课程。要学习课程 1，你需要先完成课程 0。因此，正确的课程顺序为 [0,1] 。
+示例 2:
+输入: 4, [[1,0],[2,0],[3,1],[3,2]]
+输出: [0,1,2,3] or [0,2,1,3]
+解释: 总共有 4 门课程。要学习课程 3，你应该先完成课程 1 和课程 2。并且课程 1 和课程 2 都应该排在课程 0 之后。因此，一个正确的课程顺序是 [0,1,2,3] 。另一个正确的排序是 [0,2,1,3] 。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="uprightclear.github.io/2020/05/leetcode22/" />
+<meta property="article:published_time" content="2020-05-18T16:17:27+08:00" />
+<meta property="article:modified_time" content="2020-05-18T16:17:27+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Leetcode 刷题报告 #210"/>
+<meta name="twitter:description" content="210.课程表Ⅱ 现在你总共有 n 门课需要选，记为 0 到 n-1。
+在选修某些课程之前需要一些先修课程。 例如，想要学习课程 0 ，你需要先完成课程 1 ，我们用一个匹配来表示他们: [0,1]
+给定课程总量以及它们的先决条件，返回你为了学完所有课程所安排的学习顺序。
+可能会有多个正确的顺序，你只要返回一种就可以了。如果不可能完成所有课程，返回一个空数组。
+示例 1:
+输入: 2, [[1,0]]
+输出: [0,1]
+解释: 总共有 2 门课程。要学习课程 1，你需要先完成课程 0。因此，正确的课程顺序为 [0,1] 。
+示例 2:
+输入: 4, [[1,0],[2,0],[3,1],[3,2]]
+输出: [0,1,2,3] or [0,2,1,3]
+解释: 总共有 4 门课程。要学习课程 3，你应该先完成课程 1 和课程 2。并且课程 1 和课程 2 都应该排在课程 0 之后。因此，一个正确的课程顺序是 [0,1,2,3] 。另一个正确的排序是 [0,2,1,3] 。"/>
+<meta name="generator" content="Hugo 0.64.1" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Leetcode 刷题报告 #210",
+  "url": "uprightclear.github.io\/2020\/05\/leetcode22\/",
+  "wordCount": "159",
+  "datePublished": "2020-05-18T16:17:27+08:00",
+  "dateModified": "2020-05-18T16:17:27+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "uprightclear"
+  }
+}
+</script>
+
+
+
+    <link rel="canonical" href="uprightclear.github.io/2020/05/leetcode22/">
+
+    <title>Leetcode 刷题报告 #210 | uprightclear</title>
+
+    
+    <!-- combined, minified CSS -->
+    
+    <link href="/uprightclear.github.io/css/style.6da5c906cc7a8fbb93f31cd2316c5dbe3f19ac4aa6bfb066f1243045b8f6061e.css" rel="stylesheet" integrity="sha256-baXJBsx6j7uT8xzSMWxdvj8ZrEqmv7Bm8SQwRbj2Bh4=" crossorigin="anonymous">
+    
+
+    <!-- minified Font Awesome for SVG icons -->
+    
+    <script defer src="/uprightclear.github.io/js/fontawesome.min.90e14c13cee52929ac33e1c21694a3cc95063a194eb22aad9f7976434e1a9125.js" integrity="sha256-kOFME87lKSmsM&#43;HCFpSjzJUGOhlOsiqtn3l2Q04akSU=" crossorigin="anonymous"></script>
+
+    <!-- RSS 2.0 feed -->
+    
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="uprightclear.github.io/uprightclear.github.io/">首页</a>
+          
+          <a class="nav-link" href="uprightclear.github.io/%E5%85%B3%E4%BA%8E/" title="关于">关于</a>
+          
+          
+          <a class="nav-link" href="uprightclear.github.io/%E8%81%94%E7%B3%BB/" title="联系">联系</a>
+          
+        </nav>
+      </div>
+    </div>
+    
+
+    
+    
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-title" dir="auto"><a href="uprightclear.github.io/uprightclear.github.io/" rel="home">uprightclear</a></h1>
+        <p class="lead blog-description" dir="auto">Share Life and Tech</p>
+      </div>
+    </header>
+    
+    
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode22/">Leetcode 刷题报告 #210</a></h2>
+    <p class="blog-post-meta"><time datetime="2020-05-18T16:17:27&#43;08:00">2020年05月18日</time> by uprightclear</p>
+  </header>
+  <h2 id="210课程表">210.课程表Ⅱ</h2>
+<p>现在你总共有 n 门课需要选，记为 0 到 n-1。</p>
+<p>在选修某些课程之前需要一些先修课程。 例如，想要学习课程 0 ，你需要先完成课程 1 ，我们用一个匹配来表示他们: [0,1]</p>
+<p>给定课程总量以及它们的先决条件，返回你为了学完所有课程所安排的学习顺序。</p>
+<p>可能会有多个正确的顺序，你只要返回一种就可以了。如果不可能完成所有课程，返回一个空数组。</p>
+<p>示例 1:</p>
+<p>输入: 2, [[1,0]]</p>
+<p>输出: [0,1]</p>
+<p>解释: 总共有 2 门课程。要学习课程 1，你需要先完成课程 0。因此，正确的课程顺序为 [0,1] 。</p>
+<p>示例 2:</p>
+<p>输入: 4, [[1,0],[2,0],[3,1],[3,2]]</p>
+<p>输出: [0,1,2,3] or [0,2,1,3]</p>
+<p>解释: 总共有 4 门课程。要学习课程 3，你应该先完成课程 1 和课程 2。并且课程 1 和课程 2 都应该排在课程 0 之后。因此，一个正确的课程顺序是 [0,1,2,3] 。另一个正确的排序是 [0,2,1,3] 。</p>
+<p>说明:</p>
+<p>输入的先决条件是由边缘列表表示的图形，而不是邻接矩阵。详情请参见图的表示法。
+你可以假定输入的先决条件中没有重复的边。</p>
+<p>来源：力扣（LeetCode）
+链接：<a href="https://leetcode-cn.com/problems/course-schedule-ii">https://leetcode-cn.com/problems/course-schedule-ii</a>
+著作权归领扣网络所有。</p>
+<h2 id="题解java">题解(Java)</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> <span style="color:#a6e22e">findOrder</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> numCourses<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> prerequisites<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> res <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>numCourses<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> indegree <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">[</span>numCourses<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+
+        <span style="color:#75715e">//预处理得到入度数组
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> pre <span style="color:#f92672">:</span> prerequisites<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+            indegree <span style="color:#f92672">[</span>pre<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span><span style="color:#f92672">]</span> <span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#75715e">//把入度为0的点放入queue中
+</span><span style="color:#75715e"></span>        Queue<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> queue <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayDeque<span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> numCourses <span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>indegree<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> 0<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+                queue<span style="color:#f92672">.</span><span style="color:#a6e22e">offer</span><span style="color:#f92672">(</span>i<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#75715e">//执行课程
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span><span style="color:#f92672">(</span><span style="color:#f92672">!</span>queue<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+            Integer curr <span style="color:#f92672">=</span> queue<span style="color:#f92672">.</span><span style="color:#a6e22e">poll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            res<span style="color:#f92672">[</span>i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> curr<span style="color:#f92672">;</span>
+
+            <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> pre <span style="color:#f92672">:</span> prerequisites<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>pre<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> curr<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+                    indegree<span style="color:#f92672">[</span>pre<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span><span style="color:#f92672">]</span> <span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">;</span>
+                    <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>indegree<span style="color:#f92672">[</span>pre<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> 0<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+                        queue<span style="color:#f92672">.</span><span style="color:#a6e22e">offer</span><span style="color:#f92672">(</span>pre<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+                    <span style="color:#f92672">}</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">return</span> i <span style="color:#f92672">=</span><span style="color:#f92672">=</span> numCourses <span style="color:#f92672">?</span> res <span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span><span style="color:#f92672">{</span><span style="color:#f92672">}</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="思路">思路</h2>
+<p>统计每一门课的入度，建立一个入度表。若一个元素(即一门课)的入度为0，即不需要先修课，可立即执行该元素。采用队列queue的数据结构。每当有入度为0的元素就将其加入队列，并将其从队列poll出，之后重新统计剩余元素的入度并更新入度表，再次将入度为0的元素加入队列，导出队列，如此循环往复。</p>
+
+
+  
+
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>关于</h4>
+    <p dir="auto">欢迎访问我的个人主页</p>
+  </section>
+  
+
+  
+        <section class="sidebar-module">
+    <h4>最近日志</h4>
+    <ol class="list-unstyled">
+
+
+<li><a href="uprightclear.github.io/2020/05/leetcode22/">Leetcode 刷题报告 #210</a></li>
+
+<li><a href="uprightclear.github.io/2020/05/leetcode21/">Leetcode 刷题报告 #152</a></li>
+
+<li><a href="uprightclear.github.io/2020/05/leetcode20/">Leetcode 刷题报告 #136</a></li>
+
+<li><a href="uprightclear.github.io/2020/05/leetcode19/">Leetcode 刷题报告 #83</a></li>
+
+    </ol>
+  </section>
+
+  
+
+  
+  <section class="sidebar-module">
+    <h4>链接</h4>
+    <ol class="list-unstyled">
+      
+      <li><a href="https://github.com/uprightclear">github</a></li>
+      
+      <li><a href="https://weibo.com/uprightclear">weibo</a></li>
+      
+    </ol>
+  </section>
+  
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+    
+
+    
+    <footer class="blog-footer">
+      <p dir="auto">
+      
+      除非特别声明，本站采用<a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 International license</a>.
+      
+      </p>
+      <p>
+      <a href="#">返回顶部</a>
+      </p>
+    </footer>
+    
+
+  </body>
+
+</html>
