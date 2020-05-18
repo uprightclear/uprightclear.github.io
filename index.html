@@ -9,7 +9,7 @@
 <meta property="og:description" content="Share Life and Tech" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="uprightclear.github.io/" />
-<meta property="og:updated_time" content="2020-05-15T17:36:15+08:00" />
+<meta property="og:updated_time" content="2020-05-18T10:45:57+08:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="uprightclear"/>
@@ -28,7 +28,7 @@
     "@type": "Person",
     "name": "uprightclear"
   },
-  "dateModified": "2020-05-15T17:36:15+08:00",
+  "dateModified": "2020-05-18T10:45:57+08:00",
   "keywords": "",
   "description": "Share Life and Tech"
 }
@@ -103,6 +103,26 @@
 
 <article class="blog-post">
   <header>
+    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode21/">Leetcode 刷题报告 #152</a></h2>
+    <p class="blog-post-meta"><time datetime="2020-05-18T10:45:57&#43;08:00">2020年05月18日</time> by uprightclear</p>
+  </header>
+  152.乘积最大子数组 给你一个整数数组 nums ，请你找出数组中乘积最大的连续子数组（该子数组中至少包含一个数字），并返回该子数组所对应的乘积。
+ 示例 1:
+输入: [2,3,-2,4] 输出: 6 解释: 子数组 [2,3] 有最大乘积 6。
+示例 2:
+输入: [-2,0,-1] 输出: 0 解释: 结果不能为 2, 因为 [-2,-1] 不是子数组。
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/maximum-product-subarray 著作权归领扣网络所有。
+题解(Java) public class Solution { public int maxProduct(int[] nums) { int len = nums.length; if (len == 0) { return 0; } // dp[i][0]：以 nums[i] 结尾的连续子数组的最小值  // dp[i][1]：以 nums[i] 结尾的连续子数组的最大值  int[][] dp = new int[len][2]; dp[0][0] = nums[0]; dp[0][1] = nums[0]; for (int i = 1; i &lt; len; i++) { if (nums[i] &gt;= 0) { dp[i][0] = Math.
+  <a href='uprightclear.github.io/2020/05/leetcode21/'>更多 →</a>
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
     <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode20/">Leetcode 刷题报告 #136</a></h2>
     <p class="blog-post-meta"><time datetime="2020-05-15T17:36:15&#43;08:00">2020年05月15日</time> by uprightclear</p>
   </header>
@@ -152,8 +172,7 @@ a⊕b⊕a=b⊕a⊕a=b⊕(a⊕a)=b⊕0=b
   70.爬楼梯 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
 注意：给定 n 是一个正整数。
-题解(Java) class Solution { public int singleNumber(int[] nums) { for (int i=1 ; i&lt;nums.length ; i++) { nums[0] ^= nums[i]; } return nums[0]; } } 思路 在暴力法中，我们将会把所有可能爬的阶数进行组合，也就是 1 和 2 。而在每一步中我们都会继续调用 climbStairsclimbStairs 这个函数模拟爬 11 阶和 22 阶的情形，并返回两个函数的返回值之和。
-climbStairs(i,n)=(i+1,n)+climbStairs(i+2,n)
+题解(Java) public class Solution { public int climbStairs(int n) { climb_Stairs(0, n); } public int climb_Stairs(int i, int n) { if (i &gt; n) { return 0; } if (i == n) { return 1; } return climb_Stairs(i + 1, n) + climb_Stairs(i + 2, n); } } 思路 在暴力法中，我们将会把所有可能爬的阶数进行组合，也就是 1 和 2 。而在每一步中我们都会继续调用 climbStairsclimbStairs 这个函数模拟爬 11 阶和 22 阶的情形，并返回两个函数的返回值之和。
   <a href='uprightclear.github.io/2020/05/leetcode18/'>更多 →</a>
 </article> 
 
@@ -178,27 +197,6 @@ climbStairs(i,n)=(i+1,n)+climbStairs(i+2,n)
 来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/sqrtx 著作权归领扣网络所有。
 题解(Java) class Solution { public int mySqrt(int x) { if (x == 0) { return 0; } double C = x, x0 = x; while (true) { double xi = 0.
   <a href='uprightclear.github.io/2020/05/leetcode17/'>更多 →</a>
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode16/">Leetcode 刷题报告 #67</a></h2>
-    <p class="blog-post-meta"><time datetime="2020-05-12T18:11:15&#43;08:00">2020年05月12日</time> by uprightclear</p>
-  </header>
-  67.二进制求和 给你两个二进制字符串，返回它们的和（用二进制表示）。
-输入为 非空 字符串且只包含数字 1 和 0。
- 示例 1:
-输入: a = &ldquo;11&rdquo;, b = &ldquo;1&rdquo; 输出: &ldquo;100&rdquo;
-示例 2:
-输入: a = &ldquo;1010&rdquo;, b = &ldquo;1011&rdquo; 输出: &ldquo;10101&rdquo;
-来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/add-binary 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
-题解(Java) import java.math.BigInteger; class Solution { public String addBinary(String a, String b) { BigInteger x = new BigInteger(a, 2); BigInteger y = new BigInteger(b, 2); BigInteger zero = new BigInteger(&#34;0&#34;, 2); BigInteger carry, answer; while (y.
-  <a href='uprightclear.github.io/2020/05/leetcode16/'>更多 →</a>
 </article> 
 
 
@@ -234,13 +232,13 @@ climbStairs(i,n)=(i+1,n)+climbStairs(i+2,n)
     <ol class="list-unstyled">
 
 
+<li><a href="uprightclear.github.io/2020/05/leetcode21/">Leetcode 刷题报告 #152</a></li>
+
 <li><a href="uprightclear.github.io/2020/05/leetcode20/">Leetcode 刷题报告 #136</a></li>
 
 <li><a href="uprightclear.github.io/2020/05/leetcode19/">Leetcode 刷题报告 #83</a></li>
 
 <li><a href="uprightclear.github.io/2020/05/leetcode18/">Leetcode 刷题报告 #70</a></li>
-
-<li><a href="uprightclear.github.io/2020/05/leetcode17/">Leetcode 刷题报告 #69</a></li>
 
     </ol>
   </section>

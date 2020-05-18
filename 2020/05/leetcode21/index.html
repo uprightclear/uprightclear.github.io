@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Leetcode 刷题报告 #152" />
+<meta property="og:description" content="152.乘积最大子数组 给你一个整数数组 nums ，请你找出数组中乘积最大的连续子数组（该子数组中至少包含一个数字），并返回该子数组所对应的乘积。
+ 示例 1:
+输入: [2,3,-2,4] 输出: 6 解释: 子数组 [2,3] 有最大乘积 6。
+示例 2:
+输入: [-2,0,-1] 输出: 0 解释: 结果不能为 2, 因为 [-2,-1] 不是子数组。
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/maximum-product-subarray 著作权归领扣网络所有。
+题解(Java) public class Solution { public int maxProduct(int[] nums) { int len = nums.length; if (len == 0) { return 0; } // dp[i][0]：以 nums[i] 结尾的连续子数组的最小值  // dp[i][1]：以 nums[i] 结尾的连续子数组的最大值  int[][] dp = new int[len][2]; dp[0][0] = nums[0]; dp[0][1] = nums[0]; for (int i = 1; i &lt; len; i&#43;&#43;) { if (nums[i] &gt;= 0) { dp[i][0] = Math." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="uprightclear.github.io/2020/05/leetcode21/" />
+<meta property="article:published_time" content="2020-05-18T10:45:57+08:00" />
+<meta property="article:modified_time" content="2020-05-18T10:45:57+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Leetcode 刷题报告 #152"/>
+<meta name="twitter:description" content="152.乘积最大子数组 给你一个整数数组 nums ，请你找出数组中乘积最大的连续子数组（该子数组中至少包含一个数字），并返回该子数组所对应的乘积。
+ 示例 1:
+输入: [2,3,-2,4] 输出: 6 解释: 子数组 [2,3] 有最大乘积 6。
+示例 2:
+输入: [-2,0,-1] 输出: 0 解释: 结果不能为 2, 因为 [-2,-1] 不是子数组。
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/maximum-product-subarray 著作权归领扣网络所有。
+题解(Java) public class Solution { public int maxProduct(int[] nums) { int len = nums.length; if (len == 0) { return 0; } // dp[i][0]：以 nums[i] 结尾的连续子数组的最小值  // dp[i][1]：以 nums[i] 结尾的连续子数组的最大值  int[][] dp = new int[len][2]; dp[0][0] = nums[0]; dp[0][1] = nums[0]; for (int i = 1; i &lt; len; i&#43;&#43;) { if (nums[i] &gt;= 0) { dp[i][0] = Math."/>
+<meta name="generator" content="Hugo 0.64.1" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Leetcode 刷题报告 #152",
+  "url": "uprightclear.github.io\/2020\/05\/leetcode21\/",
+  "wordCount": "199",
+  "datePublished": "2020-05-18T10:45:57+08:00",
+  "dateModified": "2020-05-18T10:45:57+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "uprightclear"
+  }
+}
+</script>
+
+
+
+    <link rel="canonical" href="uprightclear.github.io/2020/05/leetcode21/">
+
+    <title>Leetcode 刷题报告 #152 | uprightclear</title>
+
+    
+    <!-- combined, minified CSS -->
+    
+    <link href="/uprightclear.github.io/css/style.6da5c906cc7a8fbb93f31cd2316c5dbe3f19ac4aa6bfb066f1243045b8f6061e.css" rel="stylesheet" integrity="sha256-baXJBsx6j7uT8xzSMWxdvj8ZrEqmv7Bm8SQwRbj2Bh4=" crossorigin="anonymous">
+    
+
+    <!-- minified Font Awesome for SVG icons -->
+    
+    <script defer src="/uprightclear.github.io/js/fontawesome.min.90e14c13cee52929ac33e1c21694a3cc95063a194eb22aad9f7976434e1a9125.js" integrity="sha256-kOFME87lKSmsM&#43;HCFpSjzJUGOhlOsiqtn3l2Q04akSU=" crossorigin="anonymous"></script>
+
+    <!-- RSS 2.0 feed -->
+    
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="uprightclear.github.io/uprightclear.github.io/">首页</a>
+          
+          <a class="nav-link" href="uprightclear.github.io/%E5%85%B3%E4%BA%8E/" title="关于">关于</a>
+          
+          
+          <a class="nav-link" href="uprightclear.github.io/%E8%81%94%E7%B3%BB/" title="联系">联系</a>
+          
+        </nav>
+      </div>
+    </div>
+    
+
+    
+    
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-title" dir="auto"><a href="uprightclear.github.io/uprightclear.github.io/" rel="home">uprightclear</a></h1>
+        <p class="lead blog-description" dir="auto">Share Life and Tech</p>
+      </div>
+    </header>
+    
+    
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode21/">Leetcode 刷题报告 #152</a></h2>
+    <p class="blog-post-meta"><time datetime="2020-05-18T10:45:57&#43;08:00">2020年05月18日</time> by uprightclear</p>
+  </header>
+  <h2 id="152乘积最大子数组">152.乘积最大子数组</h2>
+<p>给你一个整数数组 nums ，请你找出数组中乘积最大的连续子数组（该子数组中至少包含一个数字），并返回该子数组所对应的乘积。</p>
+<p> </p>
+<p>示例 1:</p>
+<p>输入: [2,3,-2,4]
+输出: 6
+解释: 子数组 [2,3] 有最大乘积 6。</p>
+<p>示例 2:</p>
+<p>输入: [-2,0,-1]
+输出: 0
+解释: 结果不能为 2, 因为 [-2,-1] 不是子数组。</p>
+<p>来源：力扣（LeetCode）
+链接：<a href="https://leetcode-cn.com/problems/maximum-product-subarray">https://leetcode-cn.com/problems/maximum-product-subarray</a>
+著作权归领扣网络所有。</p>
+<h2 id="题解java">题解(Java)</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">maxProduct</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> len <span style="color:#f92672">=</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>len <span style="color:#f92672">=</span><span style="color:#f92672">=</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#75715e">// dp[i][0]：以 nums[i] 结尾的连续子数组的最小值
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// dp[i][1]：以 nums[i] 结尾的连续子数组的最大值
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> dp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>len<span style="color:#f92672">]</span><span style="color:#f92672">[</span>2<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+        dp<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span><span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+        dp<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span><span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> len<span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                dp<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">min</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">,</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">*</span> dp<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">]</span><span style="color:#f92672">[</span>0<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+                dp<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">,</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">*</span> dp<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">]</span><span style="color:#f92672">[</span>1<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                dp<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">min</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">,</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">*</span> dp<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">]</span><span style="color:#f92672">[</span>1<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+                dp<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">,</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">*</span> dp<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">]</span><span style="color:#f92672">[</span>0<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#75715e">// 只关心最大值，需要遍历
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> res <span style="color:#f92672">=</span> dp<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span><span style="color:#f92672">[</span>1<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> len<span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            res <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>res<span style="color:#f92672">,</span> dp<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">[</span>1<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> res<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="思路">思路</h2>
+<p>本题题解代码来自leetcode大神liweiwei1419，思路很巧妙遍历数组中的每一个元素，依次计算并存储以当前元素为结尾的连续数组的最小值和最大值并分别用dp[i][0]和dp[i][1]表示。具体的计算算法如下：</p>
+<pre><code>if nums[i] &gt;= 0 
+dp[i][0] = min(nums[i], nums[i] * dp[i - 1][0]) 
+if nums[i] &gt;= 0 
+dp[i][1] = max(nums[i], nums[i] * dp[i - 1][1]) 
+
+if nums[i] &lt; 0 
+dp[i][0] = min(nums[i], nums[i] * dp[i - 1][1]) 
+if nums[i] &lt; 0 
+dp[i][1] = max(nums[i], nums[i] * dp[i - 1][0]) 
+</code></pre><p>本题需要返回的是最大值，因此依次遍历dp数组中的dp[i][1]元素，并返回其中最大值即可。</p>
+
+
+  
+
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>关于</h4>
+    <p dir="auto">欢迎访问我的个人主页</p>
+  </section>
+  
+
+  
+        <section class="sidebar-module">
+    <h4>最近日志</h4>
+    <ol class="list-unstyled">
+
+
+<li><a href="uprightclear.github.io/2020/05/leetcode21/">Leetcode 刷题报告 #152</a></li>
+
+<li><a href="uprightclear.github.io/2020/05/leetcode20/">Leetcode 刷题报告 #136</a></li>
+
+<li><a href="uprightclear.github.io/2020/05/leetcode19/">Leetcode 刷题报告 #83</a></li>
+
+<li><a href="uprightclear.github.io/2020/05/leetcode18/">Leetcode 刷题报告 #70</a></li>
+
+    </ol>
+  </section>
+
+  
+
+  
+  <section class="sidebar-module">
+    <h4>链接</h4>
+    <ol class="list-unstyled">
+      
+      <li><a href="https://github.com/uprightclear">github</a></li>
+      
+      <li><a href="https://weibo.com/uprightclear">weibo</a></li>
+      
+    </ol>
+  </section>
+  
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+    
+
+    
+    <footer class="blog-footer">
+      <p dir="auto">
+      
+      除非特别声明，本站采用<a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 International license</a>.
+      
+      </p>
+      <p>
+      <a href="#">返回顶部</a>
+      </p>
+    </footer>
+    
+
+  </body>
+
+</html>

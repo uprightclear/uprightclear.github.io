@@ -7,10 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>除非特别声明，本站采用[Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).</copyright>
-    <lastBuildDate>Fri, 15 May 2020 17:36:15 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2020 10:45:57 +0800</lastBuildDate>
     
 	<atom:link href="uprightclear.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Leetcode 刷题报告 #152</title>
+      <link>uprightclear.github.io/2020/05/leetcode21/</link>
+      <pubDate>Mon, 18 May 2020 10:45:57 +0800</pubDate>
+      
+      <guid>uprightclear.github.io/2020/05/leetcode21/</guid>
+      <description>152.乘积最大子数组 给你一个整数数组 nums ，请你找出数组中乘积最大的连续子数组（该子数组中至少包含一个数字），并返回该子数组所对应的乘积。
+ 示例 1:
+输入: [2,3,-2,4] 输出: 6 解释: 子数组 [2,3] 有最大乘积 6。
+示例 2:
+输入: [-2,0,-1] 输出: 0 解释: 结果不能为 2, 因为 [-2,-1] 不是子数组。
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/maximum-product-subarray 著作权归领扣网络所有。
+题解(Java) public class Solution { public int maxProduct(int[] nums) { int len = nums.length; if (len == 0) { return 0; } // dp[i][0]：以 nums[i] 结尾的连续子数组的最小值  // dp[i][1]：以 nums[i] 结尾的连续子数组的最大值  int[][] dp = new int[len][2]; dp[0][0] = nums[0]; dp[0][1] = nums[0]; for (int i = 1; i &amp;lt; len; i++) { if (nums[i] &amp;gt;= 0) { dp[i][0] = Math.</description>
+    </item>
     
     <item>
       <title>Leetcode 刷题报告 #136</title>
@@ -54,8 +69,7 @@ a⊕b⊕a=b⊕a⊕a=b⊕(a⊕a)=b⊕0=b</description>
       <description>70.爬楼梯 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
 注意：给定 n 是一个正整数。
-题解(Java) class Solution { public int singleNumber(int[] nums) { for (int i=1 ; i&amp;lt;nums.length ; i++) { nums[0] ^= nums[i]; } return nums[0]; } } 思路 在暴力法中，我们将会把所有可能爬的阶数进行组合，也就是 1 和 2 。而在每一步中我们都会继续调用 climbStairsclimbStairs 这个函数模拟爬 11 阶和 22 阶的情形，并返回两个函数的返回值之和。
-climbStairs(i,n)=(i+1,n)+climbStairs(i+2,n)</description>
+题解(Java) public class Solution { public int climbStairs(int n) { climb_Stairs(0, n); } public int climb_Stairs(int i, int n) { if (i &amp;gt; n) { return 0; } if (i == n) { return 1; } return climb_Stairs(i + 1, n) + climb_Stairs(i + 2, n); } } 思路 在暴力法中，我们将会把所有可能爬的阶数进行组合，也就是 1 和 2 。而在每一步中我们都会继续调用 climbStairsclimbStairs 这个函数模拟爬 11 阶和 22 阶的情形，并返回两个函数的返回值之和。</description>
     </item>
     
     <item>
