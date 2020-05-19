@@ -103,6 +103,28 @@
 
 <article class="blog-post">
   <header>
+    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode23/">Leetcode23</a></h2>
+    <p class="blog-post-meta"><time datetime="2020-05-19T08:57:23&#43;08:00">2020年05月19日</time> by uprightclear</p>
+  </header>
+  680.验证回文字符串Ⅱ 给定一个非空字符串 s，最多删除一个字符。判断是否能成为回文字符串。
+示例 1:
+输入: &ldquo;aba&rdquo; 输出: True
+示例 2:
+输入: &ldquo;abca&rdquo; 输出: True
+解释: 你可以删除c字符。
+注意: 字符串只包含从 a-z 的小写字母。字符串的最大长度是50000。
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/valid-palindrome-ii 著作权归领扣网络所有。
+题解(Java) class Solution { public boolean validPalindrome(String s) { int low = 0, high = s.length() - 1; while (low &lt; high) { char c1 = s.
+  <a href='uprightclear.github.io/2020/05/leetcode23/'>更多 →</a>
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
     <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode22/">Leetcode 刷题报告 #210</a></h2>
     <p class="blog-post-meta"><time datetime="2020-05-18T16:17:27&#43;08:00">2020年05月18日</time> by uprightclear</p>
   </header>
@@ -188,23 +210,6 @@ a⊕b⊕a=b⊕a⊕a=b⊕(a⊕a)=b⊕0=b
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode18/">Leetcode 刷题报告 #70</a></h2>
-    <p class="blog-post-meta"><time datetime="2020-05-13T10:23:08&#43;08:00">2020年05月13日</time> by uprightclear</p>
-  </header>
-  70.爬楼梯 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
-每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
-注意：给定 n 是一个正整数。
-题解(Java) public class Solution { public int climbStairs(int n) { climb_Stairs(0, n); } public int climb_Stairs(int i, int n) { if (i &gt; n) { return 0; } if (i == n) { return 1; } return climb_Stairs(i + 1, n) + climb_Stairs(i + 2, n); } } 思路 在暴力法中，我们将会把所有可能爬的阶数进行组合，也就是 1 和 2 。而在每一步中我们都会继续调用 climbStairsclimbStairs 这个函数模拟爬 11 阶和 22 阶的情形，并返回两个函数的返回值之和。
-  <a href='uprightclear.github.io/2020/05/leetcode18/'>更多 →</a>
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   
@@ -234,13 +239,13 @@ a⊕b⊕a=b⊕a⊕a=b⊕(a⊕a)=b⊕0=b
     <ol class="list-unstyled">
 
 
+<li><a href="uprightclear.github.io/2020/05/leetcode23/">Leetcode23</a></li>
+
 <li><a href="uprightclear.github.io/2020/05/leetcode22/">Leetcode 刷题报告 #210</a></li>
 
 <li><a href="uprightclear.github.io/2020/05/leetcode21/">Leetcode 刷题报告 #152</a></li>
 
 <li><a href="uprightclear.github.io/2020/05/leetcode20/">Leetcode 刷题报告 #136</a></li>
-
-<li><a href="uprightclear.github.io/2020/05/leetcode19/">Leetcode 刷题报告 #83</a></li>
 
     </ol>
   </section>

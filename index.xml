@@ -7,10 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>除非特别声明，本站采用[Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).</copyright>
-    <lastBuildDate>Mon, 18 May 2020 16:17:27 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2020 08:57:23 +0800</lastBuildDate>
     
 	<atom:link href="uprightclear.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Leetcode23</title>
+      <link>uprightclear.github.io/2020/05/leetcode23/</link>
+      <pubDate>Tue, 19 May 2020 08:57:23 +0800</pubDate>
+      
+      <guid>uprightclear.github.io/2020/05/leetcode23/</guid>
+      <description>680.验证回文字符串Ⅱ 给定一个非空字符串 s，最多删除一个字符。判断是否能成为回文字符串。
+示例 1:
+输入: &amp;ldquo;aba&amp;rdquo; 输出: True
+示例 2:
+输入: &amp;ldquo;abca&amp;rdquo; 输出: True
+解释: 你可以删除c字符。
+注意: 字符串只包含从 a-z 的小写字母。字符串的最大长度是50000。
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/valid-palindrome-ii 著作权归领扣网络所有。
+题解(Java) class Solution { public boolean validPalindrome(String s) { int low = 0, high = s.length() - 1; while (low &amp;lt; high) { char c1 = s.</description>
+    </item>
     
     <item>
       <title>Leetcode 刷题报告 #210</title>
