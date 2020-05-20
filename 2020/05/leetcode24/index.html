@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Leetcode 刷题报告 #1371" />
+<meta property="og:description" content="1371.每个元音包含偶数次的最长子字符串 给你一个字符串 s ，请你返回满足以下条件的最长子字符串的长度：每个元音字母，即 &lsquo;a&rsquo;，&lsquo;e&rsquo;，&lsquo;i&rsquo;，&lsquo;o&rsquo;，&lsquo;u&rsquo; ，在子字符串中都恰好出现了偶数次。
+ 示例 1：
+输入：s = &ldquo;eleetminicoworoep&rdquo;
+输出：13
+解释：最长子字符串是 &ldquo;leetminicowor&rdquo; ，它包含 e，i，o 各 2 个，以及 0 个 a，u 。
+示例 2：
+输入：s = &ldquo;leetcodeisgreat&rdquo;
+输出：5
+解释：最长子字符串是 &ldquo;leetc&rdquo; ，其中包含 2 个 e 。
+示例 3：
+输入：s = &ldquo;bcbcbc&rdquo;
+输出：6
+解释：这个示例中，字符串 &ldquo;bcbcbc&rdquo; 本身就是最长的，因为所有的元音 a，e，i，o，u 都出现了 0 次。 提示：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="uprightclear.github.io/2020/05/leetcode24/" />
+<meta property="article:published_time" content="2020-05-20T20:38:41+08:00" />
+<meta property="article:modified_time" content="2020-05-20T20:38:41+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Leetcode 刷题报告 #1371"/>
+<meta name="twitter:description" content="1371.每个元音包含偶数次的最长子字符串 给你一个字符串 s ，请你返回满足以下条件的最长子字符串的长度：每个元音字母，即 &lsquo;a&rsquo;，&lsquo;e&rsquo;，&lsquo;i&rsquo;，&lsquo;o&rsquo;，&lsquo;u&rsquo; ，在子字符串中都恰好出现了偶数次。
+ 示例 1：
+输入：s = &ldquo;eleetminicoworoep&rdquo;
+输出：13
+解释：最长子字符串是 &ldquo;leetminicowor&rdquo; ，它包含 e，i，o 各 2 个，以及 0 个 a，u 。
+示例 2：
+输入：s = &ldquo;leetcodeisgreat&rdquo;
+输出：5
+解释：最长子字符串是 &ldquo;leetc&rdquo; ，其中包含 2 个 e 。
+示例 3：
+输入：s = &ldquo;bcbcbc&rdquo;
+输出：6
+解释：这个示例中，字符串 &ldquo;bcbcbc&rdquo; 本身就是最长的，因为所有的元音 a，e，i，o，u 都出现了 0 次。 提示："/>
+<meta name="generator" content="Hugo 0.64.1" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Leetcode 刷题报告 #1371",
+  "url": "uprightclear.github.io\/2020\/05\/leetcode24\/",
+  "wordCount": "316",
+  "datePublished": "2020-05-20T20:38:41+08:00",
+  "dateModified": "2020-05-20T20:38:41+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "uprightclear"
+  }
+}
+</script>
+
+
+
+    <link rel="canonical" href="uprightclear.github.io/2020/05/leetcode24/">
+
+    <title>Leetcode 刷题报告 #1371 | uprightclear</title>
+
+    
+    <!-- combined, minified CSS -->
+    
+    <link href="/uprightclear.github.io/css/style.6da5c906cc7a8fbb93f31cd2316c5dbe3f19ac4aa6bfb066f1243045b8f6061e.css" rel="stylesheet" integrity="sha256-baXJBsx6j7uT8xzSMWxdvj8ZrEqmv7Bm8SQwRbj2Bh4=" crossorigin="anonymous">
+    
+
+    <!-- minified Font Awesome for SVG icons -->
+    
+    <script defer src="/uprightclear.github.io/js/fontawesome.min.90e14c13cee52929ac33e1c21694a3cc95063a194eb22aad9f7976434e1a9125.js" integrity="sha256-kOFME87lKSmsM&#43;HCFpSjzJUGOhlOsiqtn3l2Q04akSU=" crossorigin="anonymous"></script>
+
+    <!-- RSS 2.0 feed -->
+    
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="uprightclear.github.io/uprightclear.github.io/">首页</a>
+          
+          <a class="nav-link" href="uprightclear.github.io/%E5%85%B3%E4%BA%8E/" title="关于">关于</a>
+          
+          
+          <a class="nav-link" href="uprightclear.github.io/%E8%81%94%E7%B3%BB/" title="联系">联系</a>
+          
+        </nav>
+      </div>
+    </div>
+    
+
+    
+    
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-title" dir="auto"><a href="uprightclear.github.io/uprightclear.github.io/" rel="home">uprightclear</a></h1>
+        <p class="lead blog-description" dir="auto">Share Life and Tech</p>
+      </div>
+    </header>
+    
+    
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="uprightclear.github.io/2020/05/leetcode24/">Leetcode 刷题报告 #1371</a></h2>
+    <p class="blog-post-meta"><time datetime="2020-05-20T20:38:41&#43;08:00">2020年05月20日</time> by uprightclear</p>
+  </header>
+  <h2 id="1371每个元音包含偶数次的最长子字符串">1371.每个元音包含偶数次的最长子字符串</h2>
+<p>给你一个字符串 s ，请你返回满足以下条件的最长子字符串的长度：每个元音字母，即 &lsquo;a&rsquo;，&lsquo;e&rsquo;，&lsquo;i&rsquo;，&lsquo;o&rsquo;，&lsquo;u&rsquo; ，在子字符串中都恰好出现了偶数次。</p>
+<p> </p>
+<p>示例 1：</p>
+<p>输入：s = &ldquo;eleetminicoworoep&rdquo;</p>
+<p>输出：13</p>
+<p>解释：最长子字符串是 &ldquo;leetminicowor&rdquo; ，它包含 e，i，o 各 2 个，以及 0 个 a，u 。</p>
+<p>示例 2：</p>
+<p>输入：s = &ldquo;leetcodeisgreat&rdquo;</p>
+<p>输出：5</p>
+<p>解释：最长子字符串是 &ldquo;leetc&rdquo; ，其中包含 2 个 e 。</p>
+<p>示例 3：</p>
+<p>输入：s = &ldquo;bcbcbc&rdquo;</p>
+<p>输出：6</p>
+<p>解释：这个示例中，字符串 &ldquo;bcbcbc&rdquo; 本身就是最长的，因为所有的元音 a，e，i，o，u 都出现了 0 次。
+ </p>
+<p>提示：</p>
+<p>1 &lt;= s.length &lt;= 5 x 10^5</p>
+<p>s 只包含小写英文字母。</p>
+<p>来源：力扣（LeetCode）
+链接：<a href="https://leetcode-cn.com/problems/find-the-longest-substring-containing-vowels-in-even-counts">https://leetcode-cn.com/problems/find-the-longest-substring-containing-vowels-in-even-counts</a>
+著作权归领扣网络所有。</p>
+<h2 id="题解java">题解(Java)</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">findTheLongestSubstring</span><span style="color:#f92672">(</span>String s<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> pos <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>1 <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> 5<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+        Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">fill</span><span style="color:#f92672">(</span>pos<span style="color:#f92672">,</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> ans <span style="color:#f92672">=</span> 0<span style="color:#f92672">,</span> status <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        pos<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">char</span> ch <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ch <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                status <span style="color:#f92672">^</span><span style="color:#f92672">=</span> <span style="color:#f92672">(</span>1 <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> 0<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ch <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;e&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                status <span style="color:#f92672">^</span><span style="color:#f92672">=</span> <span style="color:#f92672">(</span>1 <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> 1<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ch <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;i&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                status <span style="color:#f92672">^</span><span style="color:#f92672">=</span> <span style="color:#f92672">(</span>1 <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> 2<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ch <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;o&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                status <span style="color:#f92672">^</span><span style="color:#f92672">=</span> <span style="color:#f92672">(</span>1 <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> 3<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ch <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;u&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                status <span style="color:#f92672">^</span><span style="color:#f92672">=</span> <span style="color:#f92672">(</span>1 <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> 4<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>pos<span style="color:#f92672">[</span>status<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                ans <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>ans<span style="color:#f92672">,</span> i <span style="color:#f92672">+</span> 1 <span style="color:#f92672">-</span> pos<span style="color:#f92672">[</span>status<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                pos<span style="color:#f92672">[</span>status<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> ans<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="思路">思路</h2>
+<p>我们对每个元音字母维护一个前缀和，定义 \textit{pre}[i][k]pre[i][k] 表示在字符串前 ii 个字符中，第 kk 个元音字母一共出现的次数。假设我们需要求出 [l,r][l,r] 这个区间的子串是否满足条件，那么我们可以用 pre[r][k]-pre[l-1][k]pre[r][k]−pre[l−1][k]，在 O(1)O(1) 的时间得到第 kk 个元音字母出现的次数。对于每一个元音字母，我们都判断一下其是否出现偶数次即可。</p>
+<p>我们利用前缀和优化了统计子串的时间复杂度，然而枚举所有子串的复杂度仍需要 O(n^2)O(n
+2
+)，不足以通过本题，还需要继续进行优化，避免枚举所有子串。我们考虑枚举字符串的每个位置 ii ，计算以它结尾的满足条件的最长字符串长度。其实我们要做的就是快速找到最小的 j \in [0,i)j∈[0,i)，满足 pre[i][k]-pre[j][k]pre[i][k]−pre[j][k]（即每一个元音字母出现的次数）均为偶数，那么以 ii 结尾的最长字符串 s[j+1,i]s[j+1,i] 长度就是 i-ji−j。</p>
+<p>有经验的读者可能马上就想到了利用哈希表来优化查找的复杂度，但是单单利用前缀和，我们无法找到 ii 和 jj 相关的恒等式，像 1248. 统计优美子数组 这道题我们是能明确知道两个前缀的差值是恒定的。那难道就没办法了么？其实不然，这道题我们还有一个性质没有充分利用：我们需要找的子串中，每个元音字母都恰好出现了偶数次。</p>
+<p>偶数这个条件其实告诉了我们，对于满足条件的子串而言，两个前缀和 pre[i][k]pre[i][k] 和 pre[j][k]pre[j][k] 的奇偶性一定是相同的，因为小学数学的知识告诉我们：奇数减奇数等于偶数，偶数减偶数等于偶数。因此我们可以对前缀和稍作修改，从维护元音字母出现的次数改作维护元音字母出现次数的奇偶性。这样我们只要实时维护每个元音字母出现的奇偶性，那么 s[j+1,i]s[j+1,i] 满足条件当且仅当对于所有的 kk，pre[i][k]pre[i][k] 和 pre[j][k]pre[j][k] 的奇偶性都相等，此时我们就可以利用哈希表存储每一种奇偶性（即考虑所有的元音字母）对应最早出现的位置，边遍历边更新答案。</p>
+<p>题目做到这里基本上做完了，但是我们还可以进一步优化我们的编码方式，如果直接以每个元音字母出现次数的奇偶性为哈希表中的键，难免有些冗余，我们可能需要额外定义一个状态：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  a: cnta, // a 出现次数的奇偶性
+  e: cnte, // e 出现次数的奇偶性
+  i: cnti, // i 出现次数的奇偶性
+  o: cnto, // o 出现次数的奇偶性
+  u: cntu  // u 出现次数的奇偶性
+</code></pre></div><p>将这么一个结构当作我们哈希表存储的键值，如果题目稍作修改扩大了字符集，那么维护起来可能会比较吃力。考虑到出现次数的奇偶性其实无非就两个值，00 代表出现了偶数次，11 代表出现了奇数次，我们可以将其压缩到一个二进制数中，第 kk 位的 00 或 11 代表了第 kk 个元音字母出现的奇偶性。举一个例子，假如到第 ii 个位置，u o i e a 出现的奇偶性分别为 1 1 0 0 1，那么我们就可以将其压成一个二进制数 (11001)<em>2=(25)</em>{10}(11001)
+2
+​
+=(25)
+10
+​
+作为它的状态。这样我们就可以将 55 个元音字母出现次数的奇偶性压缩到了一个二进制数中，且连续对应了二进制数的 [(00000)_2,(11111)_2][(00000)
+2
+​
+,(11111)
+2
+​
+] 的范围，转成十进制数即 [0,31][0,31]。因此我们也不再需要使用哈希表，直接用一个长度为 3232 的数组来存储对应状态出现的最早位置即可。</p>
+<p>作者：LeetCode-Solution
+链接：<a href="https://leetcode-cn.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/solution/mei-ge-yuan-yin-bao-han-ou-shu-ci-de-zui-chang-z-2/">https://leetcode-cn.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/solution/mei-ge-yuan-yin-bao-han-ou-shu-ci-de-zui-chang-z-2/</a>
+来源：力扣（LeetCode）
+著作权归作者所有。</p>
+
+
+  
+
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>关于</h4>
+    <p dir="auto">欢迎访问我的个人主页</p>
+  </section>
+  
+
+  
+        <section class="sidebar-module">
+    <h4>最近日志</h4>
+    <ol class="list-unstyled">
+
+
+<li><a href="uprightclear.github.io/2020/05/leetcode24/">Leetcode 刷题报告 #1371</a></li>
+
+<li><a href="uprightclear.github.io/2020/05/leetcode23/">Leetcode 刷题报告 #680</a></li>
+
+<li><a href="uprightclear.github.io/2020/05/leetcode22/">Leetcode 刷题报告 #210</a></li>
+
+<li><a href="uprightclear.github.io/2020/05/leetcode21/">Leetcode 刷题报告 #152</a></li>
+
+    </ol>
+  </section>
+
+  
+
+  
+  <section class="sidebar-module">
+    <h4>链接</h4>
+    <ol class="list-unstyled">
+      
+      <li><a href="https://github.com/uprightclear">github</a></li>
+      
+      <li><a href="https://weibo.com/uprightclear">weibo</a></li>
+      
+    </ol>
+  </section>
+  
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+    
+
+    
+    <footer class="blog-footer">
+      <p dir="auto">
+      
+      除非特别声明，本站采用<a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 International license</a>.
+      
+      </p>
+      <p>
+      <a href="#">返回顶部</a>
+      </p>
+    </footer>
+    
+
+  </body>
+
+</html>
